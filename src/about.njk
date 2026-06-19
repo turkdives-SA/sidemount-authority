@@ -1,0 +1,88 @@
+---
+layout: base.njk
+title: About
+description: RAID Tech Trimix Sidemount Instructor, Crossover Instructor Trainer, and RAID T.A.G. member.
+permalink: /about/
+---
+
+<div class="about-page">
+
+  <!-- Page Hero -->
+  <header class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Credentials & Background</span>
+      <h1>About Sidemount Authority</h1>
+      <p>RAID Tech Trimix Sidemount Instructor. Crossover Instructor Trainer. RAID T.A.G. member. This is what the credentials mean — and what they cost to earn.</p>
+    </div>
+  </header>
+
+  <!-- Credentials Grid -->
+  <section class="credentials-section" aria-labelledby="credentials-heading">
+    <div class="container">
+      <span class="eyebrow">Qualifications</span>
+      <h2 id="credentials-heading" style="margin-bottom:2rem; font-size:clamp(1.5rem,2.5vw,2rem);">Certifications &amp; Recognition</h2>
+
+      <div class="credentials-grid">
+        {% for cred in credentials %}
+        <div class="credential-card">
+          <span class="credential-agency">{{ cred.agency }}</span>
+          <h3>{{ cred.credential }}</h3>
+          <p>{{ cred.detail }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- Bio Section -->
+  <section class="bio-section" aria-labelledby="bio-heading">
+    <div class="container">
+      <div class="bio-grid">
+
+        <div class="bio-image">
+          <img
+            src="/images/diver-eyecontact.webp"
+            alt="Sidemount Authority instructor in open water"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="bio-content">
+          <span class="eyebrow">The Instructor</span>
+          <h2 id="bio-heading">More Than a Configuration</h2>
+
+          <p>Sidemount is a discipline that demands precision — in setup, in buoyancy, in mindset. I've spent years refining both my own skills and my ability to pass them on to others, from first-time sidemount divers through to candidates for technical instructor ratings.</p>
+
+          <p>As a RAID Tech Trimix Sidemount Instructor and RAID Crossover Instructor Trainer, I work with divers who are serious about doing it right. Not fashionably — correctly. There's a difference, and I care about that difference.</p>
+
+          <p>The gear reviews and tips here are by-products of that commitment: honest assessments written after real dives on real kit, not after a briefing from a PR team.</p>
+
+          <a href="/contact/" class="btn btn-signal">Get in Touch</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Philosophy Section -->
+  <section class="philosophy-section" aria-labelledby="philosophy-heading">
+    <div class="container">
+      <span class="eyebrow" style="text-align:center;display:block;">Philosophy</span>
+      <h2 id="philosophy-heading" class="sr-only">Teaching Philosophy</h2>
+      <blockquote class="philosophy-quote">
+        Sidemount is not a shortcut, a trend, or a style choice. It is a configuration with logic behind it — and that logic only reveals itself when the setup is right, the trim is dialled, and the diver understands why every piece of kit is exactly where it is.
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Podcast mention -->
+  <section style="padding: 4rem 0; border-top: 1px solid var(--sa-steel);" aria-label="Media appearances">
+    <div class="container" style="display:flex;flex-direction:column;gap:1rem;align-items:flex-start;">
+      <span class="eyebrow">Media</span>
+      <h2 style="font-size:clamp(1.4rem,2vw,1.8rem);">Speaking Sidemount — Episode 89</h2>
+      <p style="color:var(--sa-chrome-dim);max-width:60ch;">Featured on the Speaking Sidemount podcast, discussing sidemount training philosophy, configuration principles, and what separates good technique from great technique.</p>
+      <a href="https://www.youtube.com/@SIDEMOUNT_AUTHORITY" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">YouTube Channel →</a>
+    </div>
+  </section>
+
+</div>

@@ -1,0 +1,48 @@
+{
+  "hero": {
+    "image": "/images/logo-hero.webp",
+    "image_alt": "Sidemount Authority — Precision. Balance. Control.",
+    "hud": [
+      { "label": "DEPTH", "value": "55.4 M" },
+      { "label": "SAC", "value": "16 L/MIN" },
+      { "label": "TEMP", "value": "14.2 °C" },
+      { "label": "NDL", "value": "∞ DECO" }
+    ]
+  },
+  "pillars": [
+    {
+      "icon": "⊕",
+      "title": "Precision Training",
+      "body": "World-class sidemount instruction from a RAID Tech Trimix Sidemount Instructor. Every skill, every drill — built to last."
+    },
+    {
+      "icon": "◈",
+      "title": "Balanced Configuration",
+      "body": "Sidemount done right means perfect horizontal trim. Learn to set up your kit the way technical diving demands."
+    },
+    {
+      "icon": "◎",
+      "title": "Gear Intelligence",
+      "body": "Real-world gear reviews from thousands of hours underwater. No sponsored fluff — just what works at depth."
+    }
+  ],
+  "photo_band": {
+    "image": "/images/diver-eyecontact.webp",
+    "image_alt": "Sidemount diver maintaining trim",
+    "quote": "Sidemount is not a configuration — it's a discipline.",
+    "coord_left": "N 18°28.431",
+    "coord_right": "W 087°27.182"
+  },
+  "featured_tips": {
+    "heading": "Latest Gear Tips",
+    "subheading": "Field-tested insight from real dives"
+  },
+  "cta": {
+    "heading": "Ready to dive deeper?",
+    "body": "Explore training courses or get in touch to discuss your goals.",
+    "button_text": "View Courses",
+    "button_url": "/training/",
+    "secondary_text": "Contact Me",
+    "secondary_url": "/contact/"
+  }
+}

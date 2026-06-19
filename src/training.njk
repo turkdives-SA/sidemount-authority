@@ -1,0 +1,76 @@
+---
+layout: base.njk
+title: Training
+description: Sidemount diving courses from recreational intro through full technical trimix, taught by a RAID Tech Trimix Sidemount Instructor.
+permalink: /training/
+---
+
+<div class="training-page">
+
+  <!-- Page Hero -->
+  <header class="page-hero">
+    <div class="container">
+      <span class="eyebrow">RAID-certified instruction</span>
+      <h1>Sidemount Training</h1>
+      <p>From your first sidemount dive to trimix exploration — every course built around the principles that actually matter underwater.</p>
+    </div>
+  </header>
+
+  <!-- Course List -->
+  <section class="training-courses" aria-labelledby="courses-heading">
+    <div class="container">
+      <div class="sr-only" id="courses-heading">Available courses</div>
+
+      <div class="course-list">
+        {% for course in courses %}
+        <article class="course-card" id="course-{{ course.id }}">
+
+          <div class="course-card-image">
+            <img
+              src="{{ course.image }}"
+              alt="{{ course.image_alt }}"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="course-card-content">
+            <span class="eyebrow">RAID</span>
+            <h3>{{ course.title }}</h3>
+            <p>{{ course.description }}</p>
+
+            <div class="course-meta">
+              <div class="course-meta-item">
+                <span class="course-meta-label">Duration</span>
+                <span class="course-meta-value mono">{{ course.duration }}</span>
+              </div>
+              <div class="course-meta-item">
+                <span class="course-meta-label">Investment</span>
+                <span class="course-meta-value mono">{{ course.price }}</span>
+              </div>
+            </div>
+
+            <div style="margin-top:0.5rem;">
+              <a href="/contact/?course={{ course.id }}" class="btn btn-signal btn-sm">Enquire →</a>
+            </div>
+          </div>
+
+        </article>
+        {% endfor %}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Bottom CTA -->
+  <section class="cta-band" aria-labelledby="training-cta-heading">
+    <div class="container">
+      <h2 id="training-cta-heading">Not sure where to start?</h2>
+      <p>Every diver is different. Get in touch and we'll work out the right pathway for your experience and goals.</p>
+      <div class="cta-buttons">
+        <a href="/contact/" class="btn btn-signal">Get in Touch</a>
+        <a href="/about/" class="btn btn-ghost">About the Instructor</a>
+      </div>
+    </div>
+  </section>
+
+</div>

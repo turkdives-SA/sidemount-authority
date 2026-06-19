@@ -1,0 +1,158 @@
+---
+layout: base.njk
+title: Precision. Balance. Control.
+description: Expert sidemount scuba diving training and gear reviews from a RAID Tech Trimix Sidemount Instructor.
+---
+
+<!-- ======================================================
+  HERO
+  ====================================================== -->
+<section class="hero" aria-label="Hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid-overlay" aria-hidden="true"></div>
+
+  <div class="hero-content">
+
+    <img
+      src="{{ home.hero.image }}"
+      alt="{{ home.hero.image_alt }}"
+      class="hero-brand-mark"
+      width="700"
+      loading="eager"
+    />
+
+    <div class="hero-hud" role="region" aria-label="Dive computer readouts">
+      {% for readout in home.hero.hud %}
+      <div class="hud-cell">
+        <span class="hud-label">{{ readout.label }}</span>
+        <span class="hud-value">{{ readout.value }}</span>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="hero-cta">
+      <a href="/training/" class="btn btn-signal">View Courses</a>
+      <a href="/gear-tips/" class="btn btn-ghost">Gear Tips</a>
+    </div>
+
+  </div>
+
+  <div class="hero-coords" aria-hidden="true">
+    <span>{{ home.photo_band.coord_left }}</span>
+    <span>{{ home.photo_band.coord_right }}</span>
+  </div>
+</section>
+
+
+<!-- ======================================================
+  PILLARS
+  ====================================================== -->
+<section class="pillars" aria-labelledby="pillars-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">The Foundation</span>
+      <h2 id="pillars-heading">Built for Technical Divers</h2>
+    </div>
+
+    <div class="pillars-grid">
+      {% for pillar in home.pillars %}
+      <div class="pillar-card">
+        <div class="pillar-icon" aria-hidden="true">{{ pillar.icon }}</div>
+        <h3>{{ pillar.title }}</h3>
+        <p>{{ pillar.body }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+
+<!-- ======================================================
+  PHOTO BAND
+  ====================================================== -->
+<section class="photo-band" aria-label="Featured image">
+  <img
+    src="{{ home.photo_band.image }}"
+    alt="{{ home.photo_band.image_alt }}"
+    class="photo-band-img"
+    loading="lazy"
+  />
+  <div class="photo-band-overlay">
+    <div class="container">
+      <div class="photo-band-text">
+        <p class="photo-band-quote">{{ home.photo_band.quote }}</p>
+        <div class="photo-band-coords" aria-label="Dive coordinates">
+          <span class="mono">{{ home.photo_band.coord_left }}</span>
+          <span class="mono">{{ home.photo_band.coord_right }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ======================================================
+  FEATURED GEAR TIPS
+  ====================================================== -->
+{% set recentPosts = collections.posts | reverse | slice(0, 3) %}
+{% if recentPosts.length %}
+<section class="featured-tips" aria-labelledby="tips-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">{{ home.featured_tips.subheading }}</span>
+      <h2 id="tips-heading">{{ home.featured_tips.heading }}</h2>
+    </div>
+
+    <div class="featured-tips-grid">
+      {% for post in recentPosts %}
+      <article class="post-card">
+        {% if post.data.hero_image %}
+        <div class="post-card-image">
+          <img src="{{ post.data.hero_image }}" alt="{{ post.data.hero_image_alt or post.data.title }}" loading="lazy" />
+        </div>
+        {% endif %}
+        <div class="post-card-body">
+          <div class="post-card-meta">
+            <time datetime="{{ post.date | htmlDateString }}">{{ post.date | postDate }}</time>
+            {% if post.data.readTime %}<span>{{ post.data.readTime }} min</span>{% endif %}
+          </div>
+          <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+          {% if post.data.description %}
+          <p>{{ post.data.description }}</p>
+          {% endif %}
+        </div>
+        <div class="post-card-footer">
+          <a href="{{ post.url }}" class="read-more">Read More →</a>
+          {% if post.data.tags %}
+            {% for tag in post.data.tags %}
+              {% if tag != "posts" %}
+              <span class="tag">{{ tag }}</span>
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+
+    <div style="text-align:center; margin-top:3rem;">
+      <a href="/gear-tips/" class="btn btn-ghost">All Gear Tips →</a>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+
+<!-- ======================================================
+  CTA BAND
+  ====================================================== -->
+<section class="cta-band" aria-labelledby="cta-heading">
+  <div class="container">
+    <h2 id="cta-heading">{{ home.cta.heading }}</h2>
+    <p>{{ home.cta.body }}</p>
+    <div class="cta-buttons">
+      <a href="{{ home.cta.button_url }}" class="btn btn-signal">{{ home.cta.button_text }}</a>
+      <a href="{{ home.cta.secondary_url }}" class="btn btn-ghost">{{ home.cta.secondary_text }}</a>
+    </div>
+  </div>
+</section>

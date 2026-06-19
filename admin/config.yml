@@ -1,0 +1,180 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "src/images"
+public_folder: "/images"
+
+site_url: https://sidemountauthority.com
+display_url: https://sidemountauthority.com
+
+# Use Netlify Identity
+local_backend: false
+
+collections:
+
+  # ──────────────────────────────────────────────
+  # GEAR TIPS (blog posts)
+  # ──────────────────────────────────────────────
+  - name: "posts"
+    label: "Gear Tips"
+    label_singular: "Gear Tip"
+    folder: "src/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    preview_path: "/gear-tips/{{slug}}/"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description (excerpt / meta)", name: "description", widget: "text", required: false }
+      - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "Hero Image", name: "hero_image", widget: "image", required: false }
+      - { label: "Hero Image Alt Text", name: "hero_image_alt", widget: "string", required: false }
+      - { label: "Read Time (minutes)", name: "readTime", widget: "number", required: false, value_type: "int" }
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        default: ["posts"]
+        hint: "Always keep 'posts' in this list. Add topic tags like 'configuration', 'cylinders', 'regulators', etc."
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # ──────────────────────────────────────────────
+  # COURSES
+  # ──────────────────────────────────────────────
+  - name: "courses"
+    label: "Training Courses"
+    label_singular: "Course"
+    files:
+      - name: "courses"
+        label: "All Courses"
+        file: "src/_data/courses.json"
+        fields:
+          - label: "Courses"
+            name: "courses"
+            widget: "list"
+            fields:
+              - { label: "ID (no spaces)", name: "id", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Duration", name: "duration", widget: "string", hint: "e.g. 2–3 days" }
+              - { label: "Price / Investment", name: "price", widget: "string", hint: "e.g. POA or £450" }
+              - { label: "Card Image", name: "image", widget: "image" }
+              - { label: "Image Alt Text", name: "image_alt", widget: "string" }
+
+  # ──────────────────────────────────────────────
+  # HOME PAGE
+  # ──────────────────────────────────────────────
+  - name: "home"
+    label: "Home Page"
+    files:
+      - name: "home"
+        label: "Home Page Content"
+        file: "src/_data/home.json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Hero Brand Mark Image", name: "image", widget: "image" }
+              - { label: "Hero Image Alt", name: "image_alt", widget: "string" }
+              - label: "HUD Readouts"
+                name: "hud"
+                widget: "list"
+                min: 4
+                max: 4
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Value", name: "value", widget: "string" }
+
+          - label: "Pillars (Three Cards)"
+            name: "pillars"
+            widget: "list"
+            min: 3
+            max: 3
+            fields:
+              - { label: "Icon Character", name: "icon", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+
+          - label: "Photo Band"
+            name: "photo_band"
+            widget: "object"
+            fields:
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Image Alt", name: "image_alt", widget: "string" }
+              - { label: "Quote", name: "quote", widget: "string" }
+              - { label: "Coordinates Left", name: "coord_left", widget: "string" }
+              - { label: "Coordinates Right", name: "coord_right", widget: "string" }
+
+          - label: "Featured Tips Section"
+            name: "featured_tips"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Subheading / Eyebrow", name: "subheading", widget: "string" }
+
+          - label: "CTA Band"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+              - { label: "Primary Button Text", name: "button_text", widget: "string" }
+              - { label: "Primary Button URL", name: "button_url", widget: "string" }
+              - { label: "Secondary Button Text", name: "secondary_text", widget: "string" }
+              - { label: "Secondary Button URL", name: "secondary_url", widget: "string" }
+
+  # ──────────────────────────────────────────────
+  # SITE SETTINGS
+  # ──────────────────────────────────────────────
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - name: "site"
+        label: "Global Settings"
+        file: "src/_data/site.json"
+        fields:
+          - { label: "Site Name", name: "name", widget: "string" }
+          - { label: "Tagline", name: "tagline", widget: "string" }
+          - { label: "Site URL", name: "url", widget: "string" }
+          - { label: "Meta Description", name: "description", widget: "text" }
+          - { label: "Contact Email", name: "email", widget: "string" }
+          - { label: "YouTube URL", name: "youtube", widget: "string" }
+          - { label: "Instagram URL", name: "instagram", widget: "string" }
+
+  # ──────────────────────────────────────────────
+  # CREDENTIALS (About page)
+  # ──────────────────────────────────────────────
+  - name: "about"
+    label: "About Page"
+    files:
+      - name: "credentials"
+        label: "Credentials"
+        file: "src/_data/credentials.json"
+        fields:
+          - label: "Credentials"
+            name: "credentials"
+            widget: "list"
+            fields:
+              - { label: "Agency", name: "agency", widget: "string" }
+              - { label: "Credential / Title", name: "credential", widget: "string" }
+              - { label: "Detail", name: "detail", widget: "text" }
+
+  # ──────────────────────────────────────────────
+  # INSTRUCTORS
+  # ──────────────────────────────────────────────
+  - name: "instructors"
+    label: "Recommended Instructors"
+    files:
+      - name: "instructors"
+        label: "Instructor Directory"
+        file: "src/_data/instructors.json"
+        fields:
+          - label: "Instructors"
+            name: "instructors"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Location", name: "location", widget: "string" }
+              - { label: "Email", name: "email", widget: "string", required: false }
+              - { label: "Agency", name: "agency", widget: "string", default: "RAID" }
+              - { label: "Notes", name: "notes", widget: "text", required: false }

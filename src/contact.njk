@@ -1,0 +1,147 @@
+---
+layout: base.njk
+title: Contact
+description: Get in touch about sidemount training courses, gear questions, or anything else.
+permalink: /contact/
+---
+
+<div class="contact-page">
+
+  <!-- Page Hero -->
+  <header class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Get in touch</span>
+      <h1>Contact</h1>
+      <p>Questions about training, gear, or anything else sidemount-related — use the form below or reach out directly.</p>
+    </div>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="contact-section" aria-labelledby="contact-form-heading">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Form -->
+        <div>
+          <h2 id="contact-form-heading" class="sr-only">Send a message</h2>
+
+          <!-- Netlify form — data-netlify="true" activates Netlify Forms -->
+          <form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            class="contact-form"
+            action="/contact/thanks/"
+          >
+            <!-- Honeypot -->
+            <p style="display:none;">
+              <label>Don't fill this out: <input name="bot-field" /></label>
+            </p>
+
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Jane Smith"
+                required
+                autocomplete="name"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="jane@example.com"
+                required
+                autocomplete="email"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <select id="subject" name="subject">
+                <option value="">— Select a topic —</option>
+                <option value="training-general">Training — General Enquiry</option>
+                <option value="course-sidemount-intro">Course — RAID Sidemount Diver</option>
+                <option value="course-advanced-sidemount">Course — RAID Advanced Sidemount</option>
+                <option value="course-tech-sidemount">Course — RAID Tech Sidemount</option>
+                <option value="course-trimix-sidemount">Course — RAID Tech Trimix Sidemount</option>
+                <option value="course-crossover">Course — Sidemount Crossover</option>
+                <option value="course-instructor">Course — Sidemount Instructor Training</option>
+                <option value="gear">Gear Question</option>
+                <option value="instructors">Instructor Listing</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Tell me about your diving background and what you're looking to achieve..."
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-signal" style="align-self:flex-start;">
+              Send Message →
+            </button>
+          </form>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="contact-sidebar" aria-label="Contact information">
+
+          <div class="contact-info-card">
+            <h3>Contact Info</h3>
+
+            <div class="contact-info-item">
+              <span class="contact-info-label">Email</span>
+              <span class="contact-info-value">
+                <a href="mailto:info@sidemountauthority.com">info@sidemountauthority.com</a>
+              </span>
+            </div>
+
+            <div class="contact-info-item">
+              <span class="contact-info-label">YouTube</span>
+              <span class="contact-info-value">
+                <a href="https://www.youtube.com/@SIDEMOUNT_AUTHORITY" target="_blank" rel="noopener">@SIDEMOUNT_AUTHORITY</a>
+              </span>
+            </div>
+
+            <div class="contact-info-item">
+              <span class="contact-info-label">Instagram</span>
+              <span class="contact-info-value">
+                <a href="https://www.instagram.com/sidemount_authority" target="_blank" rel="noopener">@sidemount_authority</a>
+              </span>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <h3>Response Time</h3>
+            <p style="color:var(--sa-chrome-dim);font-size:0.9rem;line-height:1.6;max-width:100%;">
+              I aim to respond within 48 hours. For urgent enquiries, Instagram DMs are monitored more frequently.
+            </p>
+          </div>
+
+          <div class="contact-info-card">
+            <span class="sidebar-label">TRAINING ENQUIRIES</span>
+            <p style="color:var(--sa-chrome-dim);font-size:0.9rem;line-height:1.6;max-width:100%;">
+              Include your current certification level, diving experience, and which course you're interested in. The more detail you give me, the better I can advise.
+            </p>
+          </div>
+
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+</div>

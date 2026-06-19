@@ -1,0 +1,9 @@
+[
+  {
+    "name": "Instructor Name",
+    "location": "Location, Country",
+    "email": "instructor@example.com",
+    "agency": "RAID",
+    "notes": "Brief note about this instructor's specialty or background."
+  }
+]

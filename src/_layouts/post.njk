@@ -1,0 +1,88 @@
+---
+layout: base.njk
+---
+
+<article class="post-single">
+
+  <header class="post-header">
+    <div class="container">
+      <div class="post-meta-top">
+        <a href="/gear-tips/" class="back-link">
+          <span class="back-arrow">←</span> Gear Tips
+        </a>
+        {% if tags %}
+        <div class="post-tags">
+          {% for tag in tags %}
+            {% if tag != "posts" %}
+            <span class="tag">{{ tag }}</span>
+            {% endif %}
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+
+      <h1 class="post-title">{{ title }}</h1>
+
+      {% if description %}
+      <p class="post-description">{{ description }}</p>
+      {% endif %}
+
+      <div class="post-meta">
+        <time datetime="{{ page.date | htmlDateString }}" class="post-date">
+          {{ page.date | postDate }}
+        </time>
+        {% if readTime %}
+        <span class="read-time">{{ readTime }} min read</span>
+        {% endif %}
+      </div>
+    </div>
+  </header>
+
+  {% if hero_image %}
+  <div class="post-hero-image">
+    <img src="{{ hero_image }}" alt="{{ hero_image_alt or title }}" loading="eager" />
+  </div>
+  {% endif %}
+
+  <div class="post-body">
+    <div class="container">
+      <div class="post-content">
+        {{ content | safe }}
+      </div>
+
+      <aside class="post-sidebar">
+        <div class="sidebar-card">
+          <p class="sidebar-label">ABOUT THE AUTHOR</p>
+          <p class="sidebar-body">RAID Tech Trimix Sidemount Instructor, Crossover Instructor Trainer, and RAID T.A.G. member. Real-world gear reviews from thousands of hours underwater.</p>
+          <a href="/about/" class="btn btn-ghost btn-sm">Learn More</a>
+        </div>
+
+        <div class="sidebar-card">
+          <p class="sidebar-label">INTERESTED IN TRAINING?</p>
+          <p class="sidebar-body">Explore sidemount courses from intro to full technical trimix.</p>
+          <a href="/training/" class="btn btn-signal btn-sm">View Courses</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="post-footer">
+    <div class="container">
+      <div class="post-nav">
+        {% if previousPost %}
+        <a href="{{ previousPost.url }}" class="post-nav-link post-nav-prev">
+          <span class="nav-label">← Previous</span>
+          <span class="nav-title">{{ previousPost.data.title }}</span>
+        </a>
+        {% endif %}
+        {% if nextPost %}
+        <a href="{{ nextPost.url }}" class="post-nav-link post-nav-next">
+          <span class="nav-label">Next →</span>
+          <span class="nav-title">{{ nextPost.data.title }}</span>
+        </a>
+        {% endif %}
+      </div>
+    </div>
+  </footer>
+
+</article>

@@ -1,0 +1,56 @@
+[
+  {
+    "id": "sidemount-intro",
+    "title": "RAID Sidemount Diver",
+    "description": "Master the fundamentals of sidemount configuration. This course covers harness setup, cylinder mounting, buoyancy, trim, and propulsion — everything you need to dive sidemount confidently in open water.",
+    "duration": "2–3 days",
+    "price": "POA",
+    "image": "/images/hero-reef-pair.webp",
+    "image_alt": "Two sidemount divers on a reef wall"
+  },
+  {
+    "id": "advanced-sidemount",
+    "title": "RAID Advanced Sidemount",
+    "description": "Take your sidemount skills further. Advanced trim work, redundant system management, gas switching, and more complex dive profiles. Prerequisite: RAID Sidemount Diver or equivalent.",
+    "duration": "2–3 days",
+    "price": "POA",
+    "image": "/images/diver-eyecontact.webp",
+    "image_alt": "Sidemount diver in dark open water"
+  },
+  {
+    "id": "tech-sidemount",
+    "title": "RAID Tech Sidemount",
+    "description": "The bridge between recreational sidemount and full technical diving. Decompression procedures, stage cylinder management, and advanced gas planning — all in the sidemount configuration.",
+    "duration": "4–5 days",
+    "price": "POA",
+    "image": "/images/deco-hang.webp",
+    "image_alt": "Technical diver on deco stop with twin cylinders and DSMB"
+  },
+  {
+    "id": "trimix-sidemount",
+    "title": "RAID Tech Trimix Sidemount",
+    "description": "Full technical trimix training in sidemount configuration. Deep decompression dives, helium gas mixes, and the comprehensive skill set required for deep technical exploration.",
+    "duration": "5–7 days",
+    "price": "POA",
+    "image": "/images/hero-reef-pair.webp",
+    "image_alt": "Sidemount divers descending a reef wall"
+  },
+  {
+    "id": "crossover",
+    "title": "Sidemount Crossover",
+    "description": "Already trained in backmount technical diving? This crossover programme translates your existing skills into the sidemount configuration efficiently — no backtracking, no repeated theory.",
+    "duration": "1–2 days",
+    "price": "POA",
+    "image": "/images/diver-eyecontact.webp",
+    "image_alt": "Diver demonstrating sidemount configuration"
+  },
+  {
+    "id": "instructor",
+    "title": "Sidemount Instructor Training",
+    "description": "Train with a RAID Crossover Instructor Trainer to earn your sidemount teaching credential. Covers student management, skill development pathways, and the nuances of teaching configuration-specific diving.",
+    "duration": "3–5 days",
+    "price": "POA",
+    "image": "/images/deco-hang.webp",
+    "image_alt": "Technical sidemount diver at depth"
+  }
+]
