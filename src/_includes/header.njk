@@ -1,7 +1,13 @@
 <header class="site-header" id="site-header">
+  <div class="header-hud-left">
+    <span class="header-hud-label">LAT</span>
+    <span class="header-hud-sep">—</span>
+    <span class="header-hud-value">24.5551° N</span>
+  </div>
+
   <div class="header-inner">
     <a href="/" class="header-logo" aria-label="{{ site.name }} — Home">
-      <img src="/images/logo-wordmark.webp" alt="{{ site.name }}" width="220" height="48" />
+      <img src="/images/logo-wordmark.webp" alt="{{ site.name }}" width="160" height="36" />
     </a>
 
     <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">
@@ -18,5 +24,11 @@
         <li><a href="/contact/" class="nav-link nav-link-cta">Contact</a></li>
       </ul>
     </nav>
+  </div>
+
+  <div class="header-hud-right">
+    <span class="header-hud-label">DEPTH</span>
+    <span class="header-hud-sep">—</span>
+    <span class="header-hud-value">55.4 M</span>
   </div>
 </header>
