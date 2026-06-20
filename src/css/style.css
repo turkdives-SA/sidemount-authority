@@ -258,124 +258,123 @@ p { max-width: 70ch; }
 }
 .hamburger::before { top: -6px; }
 .hamburger::after  { top: 6px; }
-
 /* ============================================================
-   HOME — HERO
+   HOME — HERO (full bleed)
    ============================================================ */
 .hero {
   position: relative;
   min-height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  padding-top: var(--header-h);
-}
-
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse at 60% 40%, var(--sa-depth) 0%, var(--sa-void) 70%);
-}
-
-.hero-grid-overlay {
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(var(--sa-steel) 1px, transparent 1px),
-    linear-gradient(90deg, var(--sa-steel) 1px, transparent 1px);
-  background-size: 60px 60px;
-  opacity: 0.07;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  gap: 3rem;
-  padding: 4rem var(--container-pad);
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+.hero-bg-image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-full-img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
 }
 
-.hero-brand-mark {
-  max-width: 700px;
-  width: 90%;
+.hero-full-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10,10,11,0.35) 0%,
+    rgba(10,10,11,0.1) 40%,
+    rgba(10,10,11,0.7) 80%,
+    rgba(10,10,11,0.95) 100%
+  );
 }
 
-/* HUD Readouts */
-.hero-hud {
+.hero-hud-bar {
+  position: relative;
+  z-index: 2;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1px;
   background: var(--sa-steel);
-  border: 1px solid var(--sa-steel);
-  border-radius: var(--radius-sm);
-  overflow: hidden;
-  width: 100%;
-  max-width: 680px;
+  border-top: 1px solid var(--sa-steel);
+  margin-top: auto;
 }
 
-.hud-cell {
-  background: var(--sa-panel);
-  padding: 1rem 1.25rem;
+.hud-bar-cell {
+  background: rgba(20, 22, 26, 0.92);
+  backdrop-filter: blur(8px);
+  padding: 1.1rem 1.5rem;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 0.25rem;
+  gap: 0.6rem;
   position: relative;
 }
 
-.hud-cell::before,
-.hud-cell::after {
+.hud-bar-cell::before {
   content: '';
   position: absolute;
-  width: 6px;
-  height: 6px;
+  top: 0; left: 0;
+  width: 3px;
+  height: 100%;
   background: var(--sa-signal);
-  border-radius: 50%;
+  opacity: 0.6;
 }
-.hud-cell::before { top: 6px; left: 6px; }
-.hud-cell::after  { bottom: 6px; right: 6px; }
 
-.hud-label {
+.hud-bar-label {
   font-family: var(--font-mono);
-  font-size: 0.6rem;
+  font-size: 0.65rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--sa-chrome-faint);
 }
 
-.hud-value {
+.hud-bar-sep {
+  color: var(--sa-signal);
   font-family: var(--font-mono);
-  font-size: clamp(0.85rem, 1.5vw, 1.05rem);
+  font-size: 0.7rem;
+}
+
+.hud-bar-value {
+  font-family: var(--font-mono);
+  font-size: clamp(0.85rem, 1.2vw, 1rem);
   font-weight: 500;
   color: var(--sa-chrome);
   letter-spacing: 0.05em;
 }
 
-.hero-cta {
+.hero-cta-bar {
+  position: relative;
+  z-index: 2;
+  width: 100%;
   display: flex;
   gap: 1rem;
-  flex-wrap: wrap;
   justify-content: center;
+  padding: 2rem var(--container-pad);
+  background: var(--sa-void);
+  border-bottom: 1px solid var(--sa-steel);
 }
 
-/* Coord readout below hero */
 .hero-coords {
   position: absolute;
-  bottom: 2rem;
+  bottom: 7rem;
   left: 50%;
   transform: translateX(-50%);
   font-family: var(--font-mono);
   font-size: 0.65rem;
   letter-spacing: 0.12em;
-  color: var(--sa-chrome-faint);
+  color: rgba(232,233,235,0.4);
   display: flex;
   gap: 2rem;
   z-index: 2;
+  white-space: nowrap;
 }
 
 /* ============================================================
