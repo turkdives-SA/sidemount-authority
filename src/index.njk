@@ -4,56 +4,47 @@ title: Precision. Balance. Control.
 description: Expert sidemount scuba diving training and gear reviews from a RAID Tech Trimix Sidemount Instructor.
 ---
 
-<!-- ======================================================
-  HERO
-  ====================================================== -->
 <section class="hero" aria-label="Hero">
-  <div class="hero-bg"></div>
-  <div class="hero-grid-overlay" aria-hidden="true"></div>
 
-  <div class="hero-content">
-
+  <div class="hero-bg-image">
     <img
-      src="{{ home.hero.image }}"
-      alt="{{ home.hero.image_alt }}"
-      class="hero-brand-mark"
-      width="700"
+      src="/images/logo-hero.webp"
+      alt="Sidemount Authority — Precision. Balance. Control."
+      class="hero-full-img"
       loading="eager"
     />
+    <div class="hero-full-overlay"></div>
+  </div>
 
-    <div class="hero-hud" role="region" aria-label="Dive computer readouts">
-      {% for readout in home.hero.hud %}
-      <div class="hud-cell">
-        <span class="hud-label">{{ readout.label }}</span>
-        <span class="hud-value">{{ readout.value }}</span>
-      </div>
-      {% endfor %}
+  <div class="hero-hud-bar" role="region" aria-label="Dive computer readouts">
+    {% for readout in home.hero.hud %}
+    <div class="hud-bar-cell">
+      <span class="hud-bar-label">{{ readout.label }}</span>
+      <span class="hud-bar-sep">—</span>
+      <span class="hud-bar-value">{{ readout.value }}</span>
     </div>
+    {% endfor %}
+  </div>
 
-    <div class="hero-cta">
-      <a href="/training/" class="btn btn-signal">View Courses</a>
-      <a href="/gear-tips/" class="btn btn-ghost">Gear Tips</a>
-    </div>
-
+  <div class="hero-cta-bar">
+    <a href="/training/" class="btn btn-signal">View Courses</a>
+    <a href="/gear-tips/" class="btn btn-ghost">Gear Tips</a>
   </div>
 
   <div class="hero-coords" aria-hidden="true">
     <span>{{ home.photo_band.coord_left }}</span>
     <span>{{ home.photo_band.coord_right }}</span>
   </div>
+
 </section>
 
 
-<!-- ======================================================
-  PILLARS
-  ====================================================== -->
 <section class="pillars" aria-labelledby="pillars-heading">
   <div class="container">
     <div class="section-header">
       <span class="eyebrow">The Foundation</span>
       <h2 id="pillars-heading">Built for Technical Divers</h2>
     </div>
-
     <div class="pillars-grid">
       {% for pillar in home.pillars %}
       <div class="pillar-card">
@@ -67,21 +58,13 @@ description: Expert sidemount scuba diving training and gear reviews from a RAID
 </section>
 
 
-<!-- ======================================================
-  PHOTO BAND
-  ====================================================== -->
 <section class="photo-band" aria-label="Featured image">
-  <img
-    src="{{ home.photo_band.image }}"
-    alt="{{ home.photo_band.image_alt }}"
-    class="photo-band-img"
-    loading="lazy"
-  />
+  <img src="{{ home.photo_band.image }}" alt="{{ home.photo_band.image_alt }}" class="photo-band-img" loading="lazy" />
   <div class="photo-band-overlay">
     <div class="container">
       <div class="photo-band-text">
         <p class="photo-band-quote">{{ home.photo_band.quote }}</p>
-        <div class="photo-band-coords" aria-label="Dive coordinates">
+        <div class="photo-band-coords">
           <span class="mono">{{ home.photo_band.coord_left }}</span>
           <span class="mono">{{ home.photo_band.coord_right }}</span>
         </div>
@@ -91,9 +74,6 @@ description: Expert sidemount scuba diving training and gear reviews from a RAID
 </section>
 
 
-<!-- ======================================================
-  FEATURED GEAR TIPS
-  ====================================================== -->
 {% set recentPosts = collections.posts | reverse | slice(0, 3) %}
 {% if recentPosts.length %}
 <section class="featured-tips" aria-labelledby="tips-heading">
@@ -102,7 +82,6 @@ description: Expert sidemount scuba diving training and gear reviews from a RAID
       <span class="eyebrow">{{ home.featured_tips.subheading }}</span>
       <h2 id="tips-heading">{{ home.featured_tips.heading }}</h2>
     </div>
-
     <div class="featured-tips-grid">
       {% for post in recentPosts %}
       <article class="post-card">
@@ -117,24 +96,19 @@ description: Expert sidemount scuba diving training and gear reviews from a RAID
             {% if post.data.readTime %}<span>{{ post.data.readTime }} min</span>{% endif %}
           </div>
           <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
-          {% if post.data.description %}
-          <p>{{ post.data.description }}</p>
-          {% endif %}
+          {% if post.data.description %}<p>{{ post.data.description }}</p>{% endif %}
         </div>
         <div class="post-card-footer">
           <a href="{{ post.url }}" class="read-more">Read More →</a>
           {% if post.data.tags %}
             {% for tag in post.data.tags %}
-              {% if tag != "posts" %}
-              <span class="tag">{{ tag }}</span>
-              {% endif %}
+              {% if tag != "posts" %}<span class="tag">{{ tag }}</span>{% endif %}
             {% endfor %}
           {% endif %}
         </div>
       </article>
       {% endfor %}
     </div>
-
     <div style="text-align:center; margin-top:3rem;">
       <a href="/gear-tips/" class="btn btn-ghost">All Gear Tips →</a>
     </div>
@@ -143,9 +117,6 @@ description: Expert sidemount scuba diving training and gear reviews from a RAID
 {% endif %}
 
 
-<!-- ======================================================
-  CTA BAND
-  ====================================================== -->
 <section class="cta-band" aria-labelledby="cta-heading">
   <div class="container">
     <h2 id="cta-heading">{{ home.cta.heading }}</h2>
