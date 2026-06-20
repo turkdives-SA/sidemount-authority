@@ -5,42 +5,40 @@ description: Expert sidemount scuba diving training and gear reviews from a RAID
 ---
 
 <!-- ======================================================
-  HERO
+  HERO — full bleed
   ====================================================== -->
 <section class="hero" aria-label="Hero">
-  <div class="hero-bg"></div>
-  <div class="hero-grid-overlay" aria-hidden="true"></div>
 
-  <div class="hero-content">
-
+  <div class="hero-bg-image">
     <img
-      src="{{ home.hero.image }}"
-      alt="{{ home.hero.image_alt }}"
-      class="hero-brand-mark"
-      width="700"
+      src="/images/logo-hero.webp"
+      alt="Sidemount Authority — Precision. Balance. Control."
+      class="hero-full-img"
       loading="eager"
     />
+    <div class="hero-full-overlay"></div>
+  </div>
 
-    <div class="hero-hud" role="region" aria-label="Dive computer readouts">
-      {% for readout in home.hero.hud %}
-      <div class="hud-cell">
-        <span class="hud-label">{{ readout.label }}</span>
-        <span class="hud-value">{{ readout.value }}</span>
-      </div>
-      {% endfor %}
+  <div class="hero-hud-bar" role="region" aria-label="Dive computer readouts">
+    {% for readout in home.hero.hud %}
+    <div class="hud-bar-cell">
+      <span class="hud-bar-label">{{ readout.label }}</span>
+      <span class="hud-bar-sep">—</span>
+      <span class="hud-bar-value">{{ readout.value }}</span>
     </div>
+    {% endfor %}
+  </div>
 
-    <div class="hero-cta">
-      <a href="/training/" class="btn btn-signal">View Courses</a>
-      <a href="/gear-tips/" class="btn btn-ghost">Gear Tips</a>
-    </div>
-
+  <div class="hero-cta-bar">
+    <a href="/training/" class="btn btn-signal">View Courses</a>
+    <a href="/gear-tips/" class="btn btn-ghost">Gear Tips</a>
   </div>
 
   <div class="hero-coords" aria-hidden="true">
     <span>{{ home.photo_band.coord_left }}</span>
     <span>{{ home.photo_band.coord_right }}</span>
   </div>
+
 </section>
 
 
