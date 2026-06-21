@@ -387,16 +387,15 @@ p { max-width: 70ch; }
 }
 
 .hero-hud-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  position: relative;
   z-index: 2;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1px;
   background: var(--sa-steel);
   border-top: 1px solid var(--sa-steel);
+  margin-top: auto;
 }
 
 .hud-overlay-cell {
@@ -541,15 +540,12 @@ p { max-width: 70ch; }
   inset: 0;
   background: linear-gradient(
     to right,
-    rgba(10,10,11,0.85) 0%,
-    rgba(10,10,11,0.4) 60%,
-    rgba(10,10,11,0.1) 100%
+    rgba(10,10,11,0.92) 0%,
+    rgba(10,10,11,0.7) 40%,
+    rgba(10,10,11,0.15) 100%
   );
   display: flex;
   align-items: center;
-  padding-inline: var(--container-pad);
-  max-width: var(--container-max);
-  margin-inline: auto;
 }
 
 .photo-band-text {
@@ -558,12 +554,17 @@ p { max-width: 70ch; }
 
 .photo-band-quote {
   font-family: var(--font-display);
-  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-size: clamp(2rem, 5vw, 4rem);
   font-weight: 700;
-  line-height: 1.3;
+  line-height: 1.1;
   margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
 }
 
+.photo-band-quote .control {
+  color: var(--sa-signal);
+}
 .photo-band-coords {
   font-family: var(--font-mono);
   font-size: 0.65rem;
