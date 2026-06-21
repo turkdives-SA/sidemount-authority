@@ -3,22 +3,34 @@
     "image": "/images/logo-hero.webp",
     "image_alt": "Sidemount Authority — Precision. Balance. Control.",
     "hud": [
-      { "label": "DEPTH", "value": "55.4 M" },
-      { "label": "SAC", "value": "16 L/MIN" },
-      { "label": "TEMP", "value": "14.2 °C" },
-      { "label": "NDL", "value": "∞ DECO" }
+      {
+        "label": "DEPTH",
+        "value": "55.4 M"
+      },
+      {
+        "label": "SAC",
+        "value": "16 L/MIN"
+      },
+      {
+        "label": "TEMP",
+        "value": "14.2 °C"
+      },
+      {
+        "label": "NDL",
+        "value": "∞ DECO"
+      }
     ]
   },
   "pillars": [
     {
       "icon": "⊕",
       "title": "Precision Training",
-      "body": "World-class sidemount instruction from a RAID Tech Trimix Sidemount Instructor. Every skill, every drill — built to last."
+      "body": "World-class sidemount instruction from a RAID Tech Trimix Sidemount Instructor and founder of the AXIS Method. "
     },
     {
       "icon": "◈",
       "title": "Balanced Configuration",
-      "body": "Sidemount done right means perfect horizontal trim. Learn to set up your kit the way technical diving demands."
+      "body": "Sidemount done right means perfect neutral static stability. Learn to set up your kit the way technical diving demands."
     },
     {
       "icon": "◎",
