@@ -31,7 +31,7 @@
   --transition: 200ms ease;
   --transition-slow: 400ms ease;
 
-  --header-h: 96px;
+  --header-h: 72px;
 }
 
 /* --- Reset ------------------------------------------------ */
@@ -159,23 +159,37 @@ p { max-width: 70ch; }
 .site-header {
   position: fixed;
   top: 0; left: 0; right: 0;
-  z-index: 1000;
-  background: rgba(10, 10, 11, 0.95);
+  height: var(--header-h);
+  background: rgba(10, 10, 11, 0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-}
-
-.header-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem 1.5rem;
   border-bottom: 1px solid var(--sa-steel);
+  z-index: 1000;
 }
 
+.header-inner {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  white-space: nowrap;
+}
 
+.hud-corner {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
 
-.header-hud-label {
+.hud-top-left    { top: 0.6rem; left: 1.5rem; }
+.hud-top-right   { top: 0.6rem; right: 1.5rem; }
+.hud-bottom-left  { bottom: 0.6rem; left: 1.5rem; }
+.hud-bottom-right { bottom: 0.6rem; right: 1.5rem; }
+
+.hud-corner-label {
   font-family: var(--font-mono);
   font-size: 0.6rem;
   letter-spacing: 0.15em;
@@ -183,24 +197,18 @@ p { max-width: 70ch; }
   color: var(--sa-chrome-faint);
 }
 
-.header-hud-sep {
+.hud-corner-sep {
   color: var(--sa-signal);
   font-family: var(--font-mono);
   font-size: 0.65rem;
 }
 
-.header-hud-value {
+.hud-corner-value {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 500;
   color: var(--sa-chrome);
   letter-spacing: 0.05em;
-}
-
-
-.header-logo img {
-  height: 36px;
-  width: auto;
 }
 
 .primary-nav .nav-list {
@@ -430,23 +438,7 @@ p { max-width: 70ch; }
   justify-content: center;
   flex-wrap: wrap;
 }
-.hud-bottom-bar {
-  position: fixed;
-  bottom: 0; left: 0; right: 0;
-  z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  background: rgba(10, 10, 11, 0.92);
-  backdrop-filter: blur(8px);
-  border-top: 1px solid var(--sa-steel);
-  padding: 0.6rem 1.5rem;
-}
 
-.hud-bottom-cell {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-}
 
 .hud-bottom-right {
   justify-content: flex-end;
