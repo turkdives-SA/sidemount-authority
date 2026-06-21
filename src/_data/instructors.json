@@ -1,16 +1,16 @@
 [
   {
-    "name": "Edd orrennson,
-    "location": Marianna, Florida, USA,
-    "email": caveadventurers@hotmail.com,
+    "name": "Edd Sorrennson",
+    "location": "Marianna, Florida, USA,"
+    "email": "caveadventurers@hotmail.com,"
     "agency": "RAID",
-    "notes": "Brief note about specialty."
+    "notes": "Steel Cyinders in the Florida cave style."
   },
   {
-    "name": "Second Instructor",
-    "location": "City, Country",
-    "email": "email@example.com",
-    "agency": "RAID",
-    "notes": "Brief note about specialty."
+    "name": "Steve Davis",
+    "location": "Northland, New Zealand",
+    "email": "steve@sidemountpros.com",
+    "agency": "TDI",
+    "notes": "Steels and Aluminum. Author and podcast host"
   }
 ]
