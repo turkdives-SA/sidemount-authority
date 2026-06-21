@@ -1,9 +1,16 @@
 [
   {
     "name": "Instructor Name",
-    "location": "Location, Country",
-    "email": "instructor@example.com",
+    "location": "City, Country",
+    "email": "email@example.com",
     "agency": "RAID",
-    "notes": "Brief note about this instructor's specialty or background."
+    "notes": "Brief note about specialty."
+  },
+  {
+    "name": "Second Instructor",
+    "location": "City, Country",
+    "email": "email@example.com",
+    "agency": "RAID",
+    "notes": "Brief note about specialty."
   }
 ]
