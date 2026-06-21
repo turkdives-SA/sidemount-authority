@@ -165,9 +165,9 @@ p { max-width: 70ch; }
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--sa-steel);
   z-index: 1000;
-  display: grid;
-  grid-template-columns: 180px 1fr 180px;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
   padding-inline: 1.5rem;
   gap: 1rem;
 }
@@ -211,6 +211,7 @@ p { max-width: 70ch; }
   justify-content: center;
   gap: 2rem;
   height: 100%;
+  flex: 1;
 }
 .header-logo img {
   height: 36px;
@@ -316,7 +317,7 @@ p { max-width: 70ch; }
   height: 100%;
   object-fit: contain;
   object-position: center center;
-  padding-top: var(--header-h);
+  padding: var(--header-h) 0 8rem 0;
 }
 
 .hero-full-overlay {
