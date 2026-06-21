@@ -6,7 +6,7 @@
 :root {
   --sa-void:         #0A0A0B;
   --sa-void-soft:    #101114;
-  --sa-panel:        #14161A;
+  --sa-panel:        #14161A;F
   --sa-steel:        #2A2D33;
   --sa-steel-light:  #3B3F47;
   --sa-chrome:       #E8E9EB;
@@ -31,7 +31,7 @@
   --transition: 200ms ease;
   --transition-slow: 400ms ease;
 
-  --header-h: 72px;
+  --header-h: 96px;
 }
 
 /* --- Reset ------------------------------------------------ */
@@ -159,29 +159,21 @@ p { max-width: 70ch; }
 .site-header {
   position: fixed;
   top: 0; left: 0; right: 0;
-  height: var(--header-h);
-  background: rgba(10, 10, 11, 0.92);
+  z-index: 1000;
+  background: rgba(10, 10, 11, 0.95);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--sa-steel);
-  z-index: 1000;
+}
+
+.header-top {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding-inline: 1.5rem;
-  gap: 1rem;
-}
-
-.header-hud-left,
-.header-hud-right {
-  display: flex;
   align-items: center;
-  gap: 0.4rem;
+  padding: 0.5rem 1.5rem;
+  border-bottom: 1px solid var(--sa-steel);
 }
 
-.header-hud-right {
-  justify-content: flex-end;
-}
+
 
 .header-hud-label {
   font-family: var(--font-mono);
@@ -205,14 +197,7 @@ p { max-width: 70ch; }
   letter-spacing: 0.05em;
 }
 
-.header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  height: 100%;
-  flex: 1;
-}
+
 .header-logo img {
   height: 36px;
   width: auto;
@@ -445,7 +430,27 @@ p { max-width: 70ch; }
   justify-content: center;
   flex-wrap: wrap;
 }
+.hud-bottom-bar {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  background: rgba(10, 10, 11, 0.92);
+  backdrop-filter: blur(8px);
+  border-top: 1px solid var(--sa-steel);
+  padding: 0.6rem 1.5rem;
+}
 
+.hud-bottom-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.hud-bottom-right {
+  justify-content: flex-end;
+}
 .hero-coords {
   position: absolute;
   bottom: 7rem;
