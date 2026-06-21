@@ -1,16 +1,17 @@
 <header class="site-header" id="site-header">
-  <div class="header-top">
-    <div class="header-hud-left">
-      <span class="header-hud-sep">—</span>
-      <span class="header-hud-label">LAT</span>
-      <span class="header-hud-value">24.5551° N</span>
-    </div>
-    <div class="header-hud-right">
-      <span class="header-hud-label">DEPTH</span>
-      <span class="header-hud-value">55.4 M</span>
-      <span class="header-hud-sep">—</span>
-    </div>
+
+  <div class="hud-corner hud-top-left">
+    <span class="hud-corner-sep">—</span>
+    <span class="hud-corner-label">LAT</span>
+    <span class="hud-corner-value">24.5551° N</span>
   </div>
+
+  <div class="hud-corner hud-top-right">
+    <span class="hud-corner-label">DEPTH</span>
+    <span class="hud-corner-value">55.4 M</span>
+    <span class="hud-corner-sep">—</span>
+  </div>
+
   <div class="header-inner">
     <a href="/" class="header-logo" aria-label="{{ site.name }} — Home">
       <img src="/images/logo-wordmark.webp" alt="{{ site.name }}" width="160" height="36" />
@@ -29,17 +30,17 @@
       </ul>
     </nav>
   </div>
-</header>
 
-<div class="hud-bottom-bar" role="region" aria-label="Dive instruments">
-  <div class="hud-bottom-cell">
-    <span class="hud-bar-sep">—</span>
-    <span class="hud-bar-label">SAC</span>
-    <span class="hud-bar-value">16 L/MIN</span>
+  <div class="hud-corner hud-bottom-left">
+    <span class="hud-corner-sep">—</span>
+    <span class="hud-corner-label">SAC</span>
+    <span class="hud-corner-value">16 L/MIN</span>
   </div>
-  <div class="hud-bottom-cell hud-bottom-right">
-    <span class="hud-bar-label">TRIM</span>
-    <span class="hud-bar-value">LOCKED</span>
-    <span class="hud-bar-sep">—</span>
+
+  <div class="hud-corner hud-bottom-right">
+    <span class="hud-corner-label">TRIM</span>
+    <span class="hud-corner-value">LOCKED</span>
+    <span class="hud-corner-sep">—</span>
   </div>
-</div>
+
+</header>
