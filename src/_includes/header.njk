@@ -1,52 +1,22 @@
 <header class="site-header" id="site-header">
-  <div class="site-header-inner">
+  <div class="header-inner">
+    <a href="/" class="header-logo" aria-label="{{ site.name }} — Home">
+      <img src="/images/logo-wordmark.webp" alt="{{ site.name }}" width="220" height="48" />
+    </a>
 
-    <div class="hud-row hud-row-top">
-      <div class="hud-item">
-        <span class="hud-sep">—</span>
-        <span class="hud-label">LAT</span>
-        <span class="hud-value">24.5551° N</span>
-      </div>
-      <div class="hud-item hud-item-right">
-        <span class="hud-label">DEPTH</span>
-        <span class="hud-value">55.4 M</span>
-        <span class="hud-sep">—</span>
-      </div>
-    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">
+      <span class="hamburger"></span>
+    </button>
 
-    <div class="nav-row">
-      <a href="/" class="header-logo" aria-label="{{ site.name }} — Home">
-        <img src="/images/logo-wordmark.webp" alt="{{ site.name }}" width="160" height="36" />
-      </a>
-
-      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">
-        <span class="hamburger"></span>
-      </button>
-
-      <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation">
-        <ul class="nav-list">
-          <li><a href="/" class="nav-link{% if page.url == '/' %} active{% endif %}">Home</a></li>
-          <li><a href="/training/" class="nav-link{% if '/training' in page.url %} active{% endif %}">Training</a></li>
-          <li><a href="/gear-tips/" class="nav-link{% if '/gear-tips' in page.url %} active{% endif %}">Gear Tips</a></li>
-          <li><a href="/instructors/" class="nav-link{% if '/instructors' in page.url %} active{% endif %}">Instructors</a></li>
-          <li><a href="/about/" class="nav-link{% if '/about' in page.url %} active{% endif %}">About</a></li>
-          <li><a href="/contact/" class="nav-link nav-link-cta">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-
-    <div class="hud-row hud-row-bottom">
-      <div class="hud-item">
-        <span class="hud-sep">—</span>
-        <span class="hud-label">SAC</span>
-        <span class="hud-value">16 L/MIN</span>
-      </div>
-      <div class="hud-item hud-item-right">
-        <span class="hud-label">TRIM</span>
-        <span class="hud-value">LOCKED</span>
-        <span class="hud-sep">—</span>
-      </div>
-    </div>
-
+    <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation">
+      <ul class="nav-list">
+        <li><a href="/" class="nav-link{% if page.url == '/' %} active{% endif %}">Home</a></li>
+        <li><a href="/training/" class="nav-link{% if '/training' in page.url %} active{% endif %}">Training</a></li>
+        <li><a href="/gear-tips/" class="nav-link{% if '/gear-tips' in page.url %} active{% endif %}">Gear Tips</a></li>
+        <li><a href="/instructors/" class="nav-link{% if '/instructors' in page.url %} active{% endif %}">Instructors</a></li>
+        <li><a href="/about/" class="nav-link{% if '/about' in page.url %} active{% endif %}">About</a></li>
+        <li><a href="/contact/" class="nav-link nav-link-cta">Contact</a></li>
+      </ul>
+    </nav>
   </div>
 </header>
