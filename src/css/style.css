@@ -176,6 +176,11 @@ p { max-width: 70ch; }
   gap: 2rem;
   white-space: nowrap;
 }
+.header-logo img {
+  height: 36px;
+  width: auto;
+  display: block;
+}
 
 .hud-corner {
   position: absolute;
