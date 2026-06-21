@@ -5,7 +5,6 @@ description: Expert sidemount scuba diving training and gear reviews from a RAID
 ---
 
 <section class="hero" aria-label="Hero">
-
   <div class="hero-bg-image">
     <img
       src="/images/logo-hero.webp"
@@ -16,26 +15,50 @@ description: Expert sidemount scuba diving training and gear reviews from a RAID
     <div class="hero-full-overlay"></div>
   </div>
 
-  <div class="hero-hud-bar" role="region" aria-label="Dive computer readouts">
-    {% for readout in home.hero.hud %}
-    <div class="hud-bar-cell">
-      <span class="hud-bar-label">{{ readout.label }}</span>
+  <div class="hero-hud-overlay" role="region" aria-label="Dive computer readouts">
+    <div class="hud-overlay-cell">
+      <span class="hud-bar-label">LAT</span>
       <span class="hud-bar-sep">—</span>
-      <span class="hud-bar-value">{{ readout.value }}</span>
+      <span class="hud-bar-value">24.5551° N</span>
     </div>
-    {% endfor %}
+    <div class="hud-overlay-cell">
+      <span class="hud-bar-label">DEPTH</span>
+      <span class="hud-bar-sep">—</span>
+      <span class="hud-bar-value">55.4 M</span>
+    </div>
+    <div class="hud-overlay-cell">
+      <span class="hud-bar-label">SAC</span>
+      <span class="hud-bar-sep">—</span>
+      <span class="hud-bar-value">16 L/MIN</span>
+    </div>
+    <div class="hud-overlay-cell">
+      <span class="hud-bar-label">TRIM</span>
+      <span class="hud-bar-sep">—</span>
+      <span class="hud-bar-value">LOCKED</span>
+    </div>
   </div>
 
-  <div class="hero-cta-bar">
-    <a href="/training/" class="btn btn-signal">View Courses</a>
-    <a href="/gear-tips/" class="btn btn-ghost">Gear Tips</a>
+  <div class="hero-body">
+    <p class="hero-subtitle">Instructor-led sidemount diving training, gear reviews, and field-tested technique. No fluff. No affiliate hype. Just what works underwater.</p>
+    <div class="hero-cta-bar">
+      <a href="/training/" class="btn btn-signal">Start Training</a>
+      <a href="/gear-tips/" class="btn btn-ghost">Browse Gear Tips</a>
+    </div>
   </div>
 
-  <div class="hero-coords" aria-hidden="true">
-    <span>{{ home.photo_band.coord_left }}</span>
-    <span>{{ home.photo_band.coord_right }}</span>
-  </div>
+</section>
 
+
+<section class="photo-band" aria-label="Featured image">
+  <img src="/images/diver-eyecontact.webp" alt="Technical sidemount diver making eye contact in dark open water" class="photo-band-img" loading="lazy" />
+  <div class="photo-band-overlay">
+    <div class="container">
+      <div class="photo-band-text">
+        <span class="eyebrow">Sidemount Diving, Done Right</span>
+        <p class="photo-band-quote">Precision. Balance. Control.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
 
@@ -46,28 +69,23 @@ description: Expert sidemount scuba diving training and gear reviews from a RAID
       <h2 id="pillars-heading">Built for Technical Divers</h2>
     </div>
     <div class="pillars-grid">
-      {% for pillar in home.pillars %}
       <div class="pillar-card">
-        <div class="pillar-icon" aria-hidden="true">{{ pillar.icon }}</div>
-        <h3>{{ pillar.title }}</h3>
-        <p>{{ pillar.body }}</p>
+        <div class="pillar-icon" aria-hidden="true">⊕</div>
+        <h3>Training &amp; Certification</h3>
+        <p>What sidemount certification involves, how to choose the right course, and how to prep so your check-out dives go smoothly.</p>
+        <a href="/training/" class="read-more">Explore Training →</a>
       </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
-
-<section class="photo-band" aria-label="Featured image">
-  <img src="{{ home.photo_band.image }}" alt="{{ home.photo_band.image_alt }}" class="photo-band-img" loading="lazy" />
-  <div class="photo-band-overlay">
-    <div class="container">
-      <div class="photo-band-text">
-        <p class="photo-band-quote">{{ home.photo_band.quote }}</p>
-        <div class="photo-band-coords">
-          <span class="mono">{{ home.photo_band.coord_left }}</span>
-          <span class="mono">{{ home.photo_band.coord_right }}</span>
-        </div>
+      <div class="pillar-card">
+        <div class="pillar-icon" aria-hidden="true">◈</div>
+        <h3>Gear Tips &amp; Reviews</h3>
+        <p>Harnesses, cylinders, regulators, and fins — tested in the water, compared honestly, with real trim and balance notes.</p>
+        <a href="/gear-tips/" class="read-more">Browse Tips →</a>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon" aria-hidden="true">◎</div>
+        <h3>Technique &amp; Community</h3>
+        <p>Trim, valve drills, gas management, and the small adjustments that separate a comfortable sidemount diver from a struggling one.</p>
+        <a href="/about/" class="read-more">Meet the Authority →</a>
       </div>
     </div>
   </div>
@@ -79,8 +97,8 @@ description: Expert sidemount scuba diving training and gear reviews from a RAID
 <section class="featured-tips" aria-labelledby="tips-heading">
   <div class="container">
     <div class="section-header">
-      <span class="eyebrow">{{ home.featured_tips.subheading }}</span>
-      <h2 id="tips-heading">{{ home.featured_tips.heading }}</h2>
+      <span class="eyebrow">Field-tested insight</span>
+      <h2 id="tips-heading">Latest From the Field</h2>
     </div>
     <div class="featured-tips-grid">
       {% for post in recentPosts %}
@@ -100,11 +118,6 @@ description: Expert sidemount scuba diving training and gear reviews from a RAID
         </div>
         <div class="post-card-footer">
           <a href="{{ post.url }}" class="read-more">Read More →</a>
-          {% if post.data.tags %}
-            {% for tag in post.data.tags %}
-              {% if tag != "posts" %}<span class="tag">{{ tag }}</span>{% endif %}
-            {% endfor %}
-          {% endif %}
         </div>
       </article>
       {% endfor %}
@@ -119,11 +132,11 @@ description: Expert sidemount scuba diving training and gear reviews from a RAID
 
 <section class="cta-band" aria-labelledby="cta-heading">
   <div class="container">
-    <h2 id="cta-heading">{{ home.cta.heading }}</h2>
-    <p>{{ home.cta.body }}</p>
+    <h2 id="cta-heading">Ready to dive with control?</h2>
+    <p>Whether you're considering your first sidemount course or refining trim after years in the configuration — start here.</p>
     <div class="cta-buttons">
-      <a href="{{ home.cta.button_url }}" class="btn btn-signal">{{ home.cta.button_text }}</a>
-      <a href="{{ home.cta.secondary_url }}" class="btn btn-ghost">{{ home.cta.secondary_text }}</a>
+      <a href="/training/" class="btn btn-signal">Find Your Course</a>
+      <a href="/contact/" class="btn btn-ghost">Get in Touch</a>
     </div>
   </div>
 </section>
