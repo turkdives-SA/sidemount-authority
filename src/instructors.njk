@@ -7,7 +7,6 @@ permalink: /instructors/
 
 <div class="instructors-page">
 
-  <!-- Page Hero -->
   <header class="page-hero">
     <div class="container">
       <span class="eyebrow">Worldwide network</span>
@@ -16,12 +15,11 @@ permalink: /instructors/
     </div>
   </header>
 
-  <!-- Instructors Table -->
   <section class="instructors-section" aria-labelledby="instructors-heading">
     <div class="container">
       <div class="sr-only" id="instructors-heading">Recommended instructor directory</div>
 
-      {% if instructors.length %}
+      {% if collections.instructors.length %}
       <div class="instructors-table-wrap">
         <table class="instructors-table">
           <thead>
@@ -34,19 +32,19 @@ permalink: /instructors/
             </tr>
           </thead>
           <tbody>
-            {% for instructor in instructors %}
+            {% for instructor in collections.instructors %}
             <tr>
-              <td>{{ instructor.name }}</td>
-              <td>{{ instructor.location }}</td>
-              <td><span class="mono">{{ instructor.agency }}</span></td>
+              <td>{{ instructor.data.name }}</td>
+              <td>{{ instructor.data.location }}</td>
+              <td><span class="mono">{{ instructor.data.agency }}</span></td>
               <td>
-                {% if instructor.email %}
-                <a href="mailto:{{ instructor.email }}">{{ instructor.email }}</a>
+                {% if instructor.data.email %}
+                <a href="mailto:{{ instructor.data.email }}">{{ instructor.data.email }}</a>
                 {% else %}
                 <span class="text-faint mono">—</span>
                 {% endif %}
               </td>
-              <td class="text-dim" style="font-size:0.875rem;">{{ instructor.notes or "—" }}</td>
+              <td class="text-dim" style="font-size:0.875rem;">{{ instructor.data.notes or "—" }}</td>
             </tr>
             {% endfor %}
           </tbody>
@@ -62,7 +60,6 @@ permalink: /instructors/
     </div>
   </section>
 
-  <!-- CTA -->
   <section class="cta-band" aria-labelledby="instructor-cta-heading">
     <div class="container">
       <h2 id="instructor-cta-heading">Are you a sidemount instructor?</h2>

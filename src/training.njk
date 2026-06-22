@@ -7,7 +7,6 @@ permalink: /training/
 
 <div class="training-page">
 
-  <!-- Page Hero -->
   <header class="page-hero">
     <div class="container">
       <span class="eyebrow">RAID-certified instruction</span>
@@ -16,41 +15,40 @@ permalink: /training/
     </div>
   </header>
 
-  <!-- Course List -->
   <section class="training-courses" aria-labelledby="courses-heading">
     <div class="container">
       <div class="sr-only" id="courses-heading">Available courses</div>
 
       <div class="course-list">
-        {% for course in courses %}
-        <article class="course-card" id="course-{{ course.id }}">
+        {% for course in collections.courses %}
+        <article class="course-card" id="course-{{ course.data.id }}">
 
           <div class="course-card-image">
             <img
-              src="{{ course.image }}"
-              alt="{{ course.image_alt }}"
+              src="{{ course.data.image }}"
+              alt="{{ course.data.image_alt }}"
               loading="lazy"
             />
           </div>
 
           <div class="course-card-content">
             <span class="eyebrow">RAID</span>
-            <h3>{{ course.title }}</h3>
-            <p>{{ course.description }}</p>
+            <h3>{{ course.data.title }}</h3>
+            <p>{{ course.data.description }}</p>
 
             <div class="course-meta">
               <div class="course-meta-item">
                 <span class="course-meta-label">Duration</span>
-                <span class="course-meta-value mono">{{ course.duration }}</span>
+                <span class="course-meta-value mono">{{ course.data.duration }}</span>
               </div>
               <div class="course-meta-item">
                 <span class="course-meta-label">Investment</span>
-                <span class="course-meta-value mono">{{ course.price }}</span>
+                <span class="course-meta-value mono">{{ course.data.price }}</span>
               </div>
             </div>
 
             <div style="margin-top:0.5rem;">
-              <a href="/contact/?course={{ course.id }}" class="btn btn-signal btn-sm">Enquire →</a>
+              <a href="/contact/?course={{ course.data.id }}" class="btn btn-signal btn-sm">Enquire →</a>
             </div>
           </div>
 
@@ -61,7 +59,6 @@ permalink: /training/
     </div>
   </section>
 
-  <!-- Bottom CTA -->
   <section class="cta-band" aria-labelledby="training-cta-heading">
     <div class="container">
       <h2 id="training-cta-heading">Not sure where to start?</h2>
