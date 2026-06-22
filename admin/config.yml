@@ -8,9 +8,6 @@ public_folder: "/images"
 site_url: https://sidemountauthority.com
 display_url: https://sidemountauthority.com
 
-# Use Netlify Identity
-local_backend: false
-
 collections:
 
   # ──────────────────────────────────────────────
@@ -25,7 +22,7 @@ collections:
     preview_path: "/gear-tips/{{slug}}/"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description (excerpt / meta)", name: "description", widget: "text", required: false }
+      - { label: "Description", name: "description", widget: "text", required: false }
       - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
       - { label: "Hero Image", name: "hero_image", widget: "image", required: false }
       - { label: "Hero Image Alt Text", name: "hero_image_alt", widget: "string", required: false }
@@ -34,31 +31,42 @@ collections:
         name: "tags"
         widget: "list"
         default: ["posts"]
-        hint: "Always keep 'posts' in this list. Add topic tags like 'configuration', 'cylinders', 'regulators', etc."
       - { label: "Body", name: "body", widget: "markdown" }
 
   # ──────────────────────────────────────────────
-  # COURSES
+  # COURSES (individual files)
   # ──────────────────────────────────────────────
   - name: "courses"
     label: "Training Courses"
     label_singular: "Course"
-    files:
-      - name: "courses"
-        label: "All Courses"
-        file: "src/_data/courses.json"
-        fields:
-          - label: "Courses"
-            name: "courses"
-            widget: "list"
-            fields:
-              - { label: "ID (no spaces)", name: "id", widget: "string" }
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
-              - { label: "Duration", name: "duration", widget: "string", hint: "e.g. 2–3 days" }
-              - { label: "Price / Investment", name: "price", widget: "string", hint: "e.g. POA or £450" }
-              - { label: "Card Image", name: "image", widget: "image" }
-              - { label: "Image Alt Text", name: "image_alt", widget: "string" }
+    folder: "src/courses"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "ID (no spaces, use hyphens)", name: "id", widget: "string" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Duration", name: "duration", widget: "string", hint: "e.g. 2–3 days" }
+      - { label: "Price / Investment", name: "price", widget: "string", hint: "e.g. POA or £450" }
+      - { label: "Card Image", name: "image", widget: "image" }
+      - { label: "Image Alt Text", name: "image_alt", widget: "string" }
+      - { label: "Display Order", name: "order", widget: "number", value_type: "int", default: 99 }
+
+  # ──────────────────────────────────────────────
+  # INSTRUCTORS (individual files)
+  # ──────────────────────────────────────────────
+  - name: "instructors"
+    label: "Recommended Instructors"
+    label_singular: "Instructor"
+    folder: "src/instructors"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Location", name: "location", widget: "string" }
+      - { label: "Email", name: "email", widget: "string", required: false }
+      - { label: "Agency", name: "agency", widget: "string", default: "RAID" }
+      - { label: "Notes", name: "notes", widget: "text", required: false }
 
   # ──────────────────────────────────────────────
   # HOME PAGE
@@ -76,15 +84,6 @@ collections:
             fields:
               - { label: "Hero Brand Mark Image", name: "image", widget: "image" }
               - { label: "Hero Image Alt", name: "image_alt", widget: "string" }
-              - label: "HUD Readouts"
-                name: "hud"
-                widget: "list"
-                min: 4
-                max: 4
-                fields:
-                  - { label: "Label", name: "label", widget: "string" }
-                  - { label: "Value", name: "value", widget: "string" }
-
           - label: "Pillars (Three Cards)"
             name: "pillars"
             widget: "list"
@@ -94,7 +93,6 @@ collections:
               - { label: "Icon Character", name: "icon", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Body", name: "body", widget: "text" }
-
           - label: "Photo Band"
             name: "photo_band"
             widget: "object"
@@ -104,14 +102,12 @@ collections:
               - { label: "Quote", name: "quote", widget: "string" }
               - { label: "Coordinates Left", name: "coord_left", widget: "string" }
               - { label: "Coordinates Right", name: "coord_right", widget: "string" }
-
           - label: "Featured Tips Section"
             name: "featured_tips"
             widget: "object"
             fields:
               - { label: "Heading", name: "heading", widget: "string" }
-              - { label: "Subheading / Eyebrow", name: "subheading", widget: "string" }
-
+              - { label: "Subheading", name: "subheading", widget: "string" }
           - label: "CTA Band"
             name: "cta"
             widget: "object"
@@ -158,23 +154,3 @@ collections:
               - { label: "Agency", name: "agency", widget: "string" }
               - { label: "Credential / Title", name: "credential", widget: "string" }
               - { label: "Detail", name: "detail", widget: "text" }
-
-  # ──────────────────────────────────────────────
-  # INSTRUCTORS
-  # ──────────────────────────────────────────────
-  - name: "instructors"
-    label: "Recommended Instructors"
-    files:
-      - name: "instructors"
-        label: "Instructor Directory"
-        file: "src/_data/instructors.json"
-        fields:
-          - label: "Instructors"
-            name: "instructors"
-            widget: "list"
-            fields:
-              - { label: "Name", name: "name", widget: "string" }
-              - { label: "Location", name: "location", widget: "string" }
-              - { label: "Email", name: "email", widget: "string", required: false }
-              - { label: "Agency", name: "agency", widget: "string", default: "RAID" }
-              - { label: "Notes", name: "notes", widget: "text", required: false }
