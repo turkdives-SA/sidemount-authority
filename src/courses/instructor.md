@@ -14,5 +14,5 @@ duration: 6 days
 price: $450 per day
 image: /images/deco-hang.webp
 image_alt: Technical sidemount diver at depth
-order: 4
+order: 3
 ---
