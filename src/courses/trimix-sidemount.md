@@ -13,7 +13,7 @@ description: >-
   Divers on this course use three optimized decompression gases, including up to 100% oxygen for efficient off-gassing. Staged ascents must be perfectly timed with controlled gas switches and excellent team communications.
 
 
-  Prerequisites: 
+  <p>Prerequisites: 
 
   Be a minimum of 18 years old.
 
@@ -31,7 +31,7 @@ description: >-
 
   Submit current First Aid & CPR training and Oxygen Administration certificates.
 
-  Be certified as RAID Sidemount diver.
+  Be certified as RAID Sidemount diver.</p>
 duration: 5–7 days
 price: $450 per day
 image: /images/hero-reef-pair.webp
