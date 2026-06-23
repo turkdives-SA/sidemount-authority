@@ -9,5 +9,5 @@ duration: 4 days
 price: $400 per day
 image: /images/hero-reef-pair.webp
 image_alt: Two sidemount divers on a reef wall
-order: 1
+order: 2
 ---
