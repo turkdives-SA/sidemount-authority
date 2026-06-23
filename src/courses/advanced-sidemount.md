@@ -18,5 +18,5 @@ duration: 1-6 days
 price: $400 per day
 image: /images/diver-eyecontact.webp
 image_alt: Sidemount diver in dark open water
-order: 2
+order: 1
 ---
