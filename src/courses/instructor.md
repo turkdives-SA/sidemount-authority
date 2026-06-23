@@ -1,5 +1,5 @@
 ---
-id: instructor
+id: Adv Deco
 title: RAID Sidemount Advanced Decompression
 description: >-
   The RAID Advanced Decompression course is designed for experienced divers
