@@ -21,5 +21,5 @@ duration: 3-4 days
 price: $400 per day
 image: /images/diver-eyecontact.webp
 image_alt: Diver demonstrating sidemount configuration
-order: 5
+order: 6
 ---
