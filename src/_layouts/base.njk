@@ -30,6 +30,51 @@
 
   <!-- Netlify Identity (required for Decap CMS auth) -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{ site.url }}/#organization",
+      "name": "{{ site.name }}",
+      "url": "{{ site.url }}",
+      "logo": "{{ site.url }}/images/logo-wordmark.webp",
+      "description": "{{ site.description }}",
+      "sameAs": [
+        "{{ site.youtube }}",
+        "{{ site.instagram }}"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "{{ site.url }}/#website",
+      "url": "{{ site.url }}",
+      "name": "{{ site.name }}",
+      "description": "{{ site.description }}",
+      "publisher": { "@id": "{{ site.url }}/#organization" }
+    },
+    {
+      "@type": "Person",
+      "name": "Sidemount Authority Instructor",
+      "jobTitle": "RAID Tech Trimix Sidemount Instructor",
+      "url": "{{ site.url }}/about/",
+      "sameAs": [
+        "{{ site.youtube }}",
+        "{{ site.instagram }}"
+      ],
+      "knowsAbout": [
+        "Sidemount Diving",
+        "Technical Diving",
+        "Trimix Diving",
+        "Scuba Instruction",
+        "RAID Diving"
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
