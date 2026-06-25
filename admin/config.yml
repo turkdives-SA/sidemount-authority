@@ -11,15 +11,15 @@ display_url: https://sidemountauthority.com
 collections:
 
   # ──────────────────────────────────────────────
-  # GEAR TIPS (blog posts)
+  # ARTICLES (blog posts)
   # ──────────────────────────────────────────────
   - name: "posts"
-    label: "Gear Tips"
-    label_singular: "Gear Tip"
+    label: "Articles"
+    label_singular: "Article"
     folder: "src/posts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    preview_path: "/gear-tips/{{slug}}/"
+    preview_path: "/articles/{{slug}}/"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "text", required: false }
@@ -27,6 +27,16 @@ collections:
       - { label: "Hero Image", name: "hero_image", widget: "image", required: false }
       - { label: "Hero Image Alt Text", name: "hero_image_alt", widget: "string", required: false }
       - { label: "Read Time (minutes)", name: "readTime", widget: "number", required: false, value_type: "int" }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        required: false
+        default: "gear"
+        options:
+          - { label: "Gear", value: "gear" }
+          - { label: "Safety & Standards", value: "safety" }
+          - { label: "Industry", value: "industry" }
+          - { label: "Training", value: "training" }
       - label: "Tags"
         name: "tags"
         widget: "list"
