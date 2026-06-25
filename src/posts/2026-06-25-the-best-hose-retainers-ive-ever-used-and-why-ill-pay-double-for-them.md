@@ -2,7 +2,7 @@
 title: The Best Hose Retainers I've Ever Used (And Why I'll Pay Double for Them)
 description: >+
   After six years of side mount diving on D'luxe Dive Gear's hose retainers,
-  here's why I think they're worth every euro — even at twice the price of the
+  here's why I think they're worth every penny — even at twice the price of the
   rubber alternatives.
 
 date: 2026-06-25
