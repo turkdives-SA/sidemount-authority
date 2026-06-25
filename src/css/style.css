@@ -1457,3 +1457,49 @@ p { max-width: 70ch; }
     align-items: center;
   }
 }
+/* ============================================================
+   ARTICLES FILTER BUTTONS
+   ============================================================ */
+.articles-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  padding: 2rem var(--container-pad) 1rem;
+  max-width: var(--container-max);
+  margin-inline: auto;
+}
+
+.filter-btn {
+  background: transparent;
+  border: 1px solid var(--sa-steel);
+  color: var(--sa-chrome-dim);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.55rem 1.1rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.filter-btn:hover {
+  border-color: var(--sa-chrome-dim);
+  color: var(--sa-chrome);
+}
+
+.filter-btn.active {
+  background: var(--sa-signal);
+  border-color: var(--sa-signal);
+  color: #fff;
+}
+
+/* Category tag color variants */
+.post-tag {
+  text-transform: capitalize;
+}
+.post-tag--gear     { background: var(--sa-steel); color: var(--sa-chrome); }
+.post-tag--safety   { background: #7a2222; color: #fff; }
+.post-tag--industry { background: #1f3a5f; color: #fff; }
+.post-tag--training { background: #2a5f3a; color: #fff; }
