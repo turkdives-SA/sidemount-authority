@@ -46,4 +46,30 @@ permalink: /articles/
 <script>
 (function() {
   const buttons = document.querySelectorAll('.filter-btn');
-  const cards = document.querySelectorAll('.post-card
+  const cards = document.querySelectorAll('.post-card[data-category]');
+  const countEl = document.getElementById('visible-count');
+  const msgEl = document.getElementById('no-articles');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.dataset.filter;
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      let visible = 0;
+      cards.forEach(card => {
+        const cat = card.dataset.category;
+        if (filter === 'all' || cat === filter) {
+          card.style.display = '';
+          visible++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+      if (countEl) countEl.textContent = visible;
+      if (msgEl) msgEl.style.display = visible === 0 ? 'block' : 'none';
+    });
+  });
+})();
+</script>
+{% endraw %}
