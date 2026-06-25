@@ -6,7 +6,7 @@ description: >+
   rubber alternatives.
 
 date: 2026-06-25
-hero_image: /images/dluxe.png
+hero_image: /images/download_4.avif
 category: gear
 tags:
   - posts
