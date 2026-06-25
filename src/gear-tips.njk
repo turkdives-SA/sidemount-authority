@@ -5,81 +5,39 @@ description: Honest sidemount scuba gear reviews and technique tips from a worki
 permalink: /gear-tips/
 ---
 
-<div class="gear-tips-page">
+<section class="page-hero">
+  <p class="page-label">Field-tested insight</p>
+  <h1>Gear Tips</h1>
+  <p class="page-intro">Real-world reviews and technical insights from thousands of hours in sidemount configuration. No sponsored fluff — just what works at depth.</p>
+</section>
 
-  <!-- Page Hero -->
-  <header class="page-hero">
-    <div class="container">
-      <span class="eyebrow">Field-tested insight</span>
-      <h1>Gear Tips</h1>
-      <p>Real-world reviews and technical insights from thousands of hours in sidemount configuration. No sponsored fluff — just what works at depth.</p>
+<section class="posts-grid">
+  {% set gearposts = collections.posts | reverse %}
+  {% set filtered = [] %}
+  {% for post in gearposts %}
+    {% if post.data.category == "gear" or not post.data.category %}
+      {% set filtered = (filtered.push(post), filtered) %}
+    {% endif %}
+  {% endfor %}
+
+  <p class="posts-count">{{ filtered | length }} posts</p>
+
+  {% for post in filtered %}
+  <article class="post-card">
+    {% if post.data.hero_image %}
+    <a href="{{ post.url }}">
+      <img src="{{ post.data.hero_image }}" alt="{{ post.data.hero_image_alt }}" loading="lazy">
+    </a>
+    {% endif %}
+    <div class="post-card__body">
+      <div class="post-card__meta">
+        <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+        {% if post.data.readTime %}<span>{{ post.data.readTime }} min read</span>{% endif %}
+      </div>
+      <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+      <p>{{ post.data.description }}</p>
+      <a href="{{ post.url }}" class="read-more">Read More →</a>
     </div>
-  </header>
-
-  <!-- Posts Grid -->
-  <section class="gear-tips-index" aria-labelledby="posts-heading">
-    <div class="container">
-
-      {% if collections.posts.length %}
-        <div class="sr-only" id="posts-heading">Gear tip articles — {{ collections.posts.length }} posts</div>
-
-        <div class="posts-grid">
-          {% for post in collections.posts | reverse %}
-          <article class="post-card">
-
-            {% if post.data.hero_image %}
-            <div class="post-card-image">
-              <img
-                src="{{ post.data.hero_image }}"
-                alt="{{ post.data.hero_image_alt or post.data.title }}"
-                loading="lazy"
-              />
-            </div>
-            {% endif %}
-
-            <div class="post-card-body">
-              <div class="post-card-meta">
-                <time datetime="{{ post.date | htmlDateString }}">{{ post.date | postDate }}</time>
-                {% if post.data.readTime %}<span>{{ post.data.readTime }} min read</span>{% endif %}
-              </div>
-
-              <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
-
-              {% if post.data.description %}
-              <p>{{ post.data.description }}</p>
-              {% else %}
-              <p>{{ post.templateContent | excerpt }}</p>
-              {% endif %}
-            </div>
-
-            <div class="post-card-footer">
-              <a href="{{ post.url }}" class="read-more">Read More →</a>
-              {% if post.data.tags %}
-              <div style="display:flex;gap:0.4rem;">
-                {% for tag in post.data.tags %}
-                  {% if tag != "posts" %}
-                  <span class="tag">{{ tag }}</span>
-                  {% endif %}
-                {% endfor %}
-              </div>
-              {% endif %}
-            </div>
-
-          </article>
-          {% endfor %}
-        </div>
-
-      {% else %}
-
-        <div class="no-posts">
-          <p class="eyebrow">Coming Soon</p>
-          <p>Gear tips launching soon. Check back shortly or subscribe to the RSS feed.</p>
-          <a href="/feed.xml" class="btn btn-ghost" style="margin-top:1.5rem;">RSS Feed</a>
-        </div>
-
-      {% endif %}
-
-    </div>
-  </section>
-
-</div>
+  </article>
+  {% endfor %}
+</section>
