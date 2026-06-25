@@ -20,6 +20,7 @@ permalink: /articles/
 
 <section class="posts-grid">
   <p class="posts-count"><span id="visible-count">{{ collections.posts | length }}</span> articles</p>
+  <p class="no-articles-msg" id="no-articles" style="display:none; text-align:center; color:var(--sa-chrome-dim); padding:3rem 1rem; font-family:var(--font-mono); font-size:0.85rem;">No articles in this category yet. Check back soon.</p>
   {% for post in collections.posts | reverse %}
   <article class="post-card" data-category="{{ post.data.category or 'gear' }}">
     {% if post.data.hero_image %}
