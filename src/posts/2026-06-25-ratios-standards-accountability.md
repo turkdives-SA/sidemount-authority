@@ -5,7 +5,7 @@ description: SDI lowered their ratios — but did they do enough? A working
   divers.
 date: 2026-06-25
 hero_image: /images/scuba_safety_facebook_graphic.png
-readTime: 6
+readTime: ""
 category: industry
 tags:
   - posts
