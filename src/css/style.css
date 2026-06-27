@@ -457,11 +457,10 @@ p { max-width: 70ch; }
   padding: 6rem 0;
 }
 
-.featured-tips-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-}
+.featured-tips-grid,
+  .posts-grid {
+    grid-template-columns: 1fr;
+  }
 
 /* ============================================================
    HOME — CTA BAND
