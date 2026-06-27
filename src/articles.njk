@@ -27,6 +27,8 @@ permalink: /articles/
     <a href="{{ post.url }}" class="post-card-image">
       <img src="{{ post.data.hero_image }}" alt="{{ post.data.hero_image_alt }}" loading="lazy">
     </a>
+    {% else %}
+    <a href="{{ post.url }}" class="post-card-image post-card-image--placeholder"></a>
     {% endif %}
     <div class="post-card-body">
       <div class="post-card-meta">
