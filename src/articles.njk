@@ -18,7 +18,8 @@ permalink: /articles/
   <button class="filter-btn" data-filter="training">Training</button>
 </section>
 
-<section class="posts-grid">
+<section class="posts-section">
+  <div class="container">
   <p class="posts-count"><span id="visible-count">{{ collections.posts | length }}</span> articles</p>
   <p class="no-articles-msg" id="no-articles" style="display:none; text-align:center; color:var(--sa-chrome-dim); padding:3rem 1rem; font-family:var(--font-mono); font-size:0.85rem;">No articles in this category yet. Check back soon.</p>
   {% for post in collections.posts | reverse %}
@@ -41,7 +42,8 @@ permalink: /articles/
       <a href="{{ post.url }}" class="read-more">Read More →</a>
     </div>
   </article>
-  {% endfor %}
+ {% endfor %}
+  </div>
 </section>
 
 {% raw %}
