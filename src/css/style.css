@@ -512,9 +512,30 @@ p { max-width: 70ch; }
   transform: translateY(-2px);
 }
 
-.post-card-image {
+  .post-card-image {
+  display: block;
   aspect-ratio: 16/9;
   overflow: hidden;
+  background: var(--sa-panel);
+}
+
+.post-card-image--placeholder {
+  aspect-ratio: 16/9;
+  background: var(--sa-panel);
+  border-bottom: 2px solid var(--sa-signal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.post-card-image--placeholder::after {
+  content: 'SIDEMOUNT AUTHORITY';
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--sa-chrome-faint);
+}
 }
 
 .post-card-image img {
