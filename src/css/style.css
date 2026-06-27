@@ -729,6 +729,10 @@ p { max-width: 70ch; }
   padding: 5rem 0;
 }
 
+.posts-section {
+  padding: 3rem 0 5rem;
+}
+
 .posts-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
