@@ -6,6 +6,7 @@ description: I reviewed the Deep Six Eddy fin eight years ago as a new diver
   hasn't changed — it's only gotten stronger.
 date: 2026-06-29
 hero_image: /images/screenshot-2026-06-29-061016.png
+hero_image_alt: Deep Six Eddy fins on a reef
 category: gear
 tags:
   - posts
