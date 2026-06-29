@@ -7,6 +7,8 @@ description: >+
 
 date: 2026-06-25
 hero_image: /images/download_4.avif
+hero_image_alt: D'luxe Dive Gear sidemount hose retainers are the best scuba
+  hose management for sidemount divers
 category: gear
 tags:
   - posts
