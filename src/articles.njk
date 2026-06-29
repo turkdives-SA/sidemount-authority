@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 title: Articles
-description: Field notes, industry opinion, safety standards, and training insights from a RAID Tech Trimix Sidemount Instructor.
+description: "Field notes, industry opinion, safety standards, and training insights from a RAID Tech Trimix Sidemount Instructor."
 permalink: /articles/
 ---
 <section class="page-hero">
@@ -18,10 +18,12 @@ permalink: /articles/
   <button class="filter-btn" data-filter="training">Training</button>
 </section>
 
-<section class="posts-section">
-  <div class="container">
+<div class="posts-section-meta">
   <p class="posts-count"><span id="visible-count">{{ collections.posts | length }}</span> articles</p>
-  <p class="no-articles-msg" id="no-articles" style="display:none; text-align:center; color:var(--sa-chrome-dim); padding:3rem 1rem; font-family:var(--font-mono); font-size:0.85rem;">No articles in this category yet. Check back soon.</p>
+  <p class="no-articles-msg" id="no-articles" style="display:none;">No articles in this category yet. Check back soon.</p>
+</div>
+
+<section class="posts-grid">
   {% for post in collections.posts | reverse %}
   <article class="post-card" data-category="{{ post.data.category or 'gear' }}">
     {% if post.data.hero_image %}
@@ -42,8 +44,7 @@ permalink: /articles/
       <a href="{{ post.url }}" class="read-more">Read More →</a>
     </div>
   </article>
- {% endfor %}
-  </div>
+  {% endfor %}
 </section>
 
 {% raw %}
@@ -53,13 +54,11 @@ permalink: /articles/
   const cards = document.querySelectorAll('.post-card[data-category]');
   const countEl = document.getElementById('visible-count');
   const msgEl = document.getElementById('no-articles');
-
   buttons.forEach(btn => {
     btn.addEventListener('click', () => {
       const filter = btn.dataset.filter;
       buttons.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-
       let visible = 0;
       cards.forEach(card => {
         const cat = card.dataset.category;
