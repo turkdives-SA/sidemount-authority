@@ -5,6 +5,8 @@ description: SDI lowered their ratios — but did they do enough? A working
   divers.
 date: 2026-06-25
 hero_image: /images/scuba_safety_facebook_graphic.png
+hero_image_alt: Scuba instructor-to-student ratio comparison graphic showing 4:1
+  RSTC standard versus the 1:1 gold standard for diver safety
 readTime: ""
 category: industry
 tags:
