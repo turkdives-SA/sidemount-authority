@@ -24,7 +24,7 @@ permalink: /articles/
 </div>
 
 <section class="posts-grid">
-  {% for post in collections.posts | reverse %}
+ {% for post in collections.posts | sort(true, false, "date") %}
   <article class="post-card" data-category="{{ post.data.category or 'gear' }}">
     {% if post.data.hero_image %}
     <a href="{{ post.url }}" class="post-card-image">
