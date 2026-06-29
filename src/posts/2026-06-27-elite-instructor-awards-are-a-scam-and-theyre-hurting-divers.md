@@ -5,6 +5,8 @@ description: Your agency gave you an Elite Instructor award. Congratulations. It
   awards are bad for diving and bad for the divers we're supposed to protect.
 date: 2026-06-27
 hero_image: /images/elite-award-hero.png
+hero_image_alt: Infographic showing dive agency elite instructor award criteria
+  measured against actual minimum safety standards
 category: safety
 tags:
   - posts
