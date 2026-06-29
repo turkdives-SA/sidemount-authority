@@ -1527,3 +1527,17 @@ p { max-width: 70ch; }
 .post-tag--safety   { background: #7a2222; color: #fff; }
 .post-tag--industry { background: #1f3a5f; color: #fff; }
 .post-tag--training { background: #2a5f3a; color: #fff; }
+
+.posts-section-meta {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding: 1rem var(--container-pad) 0;
+}
+
+.no-articles-msg {
+  text-align: center;
+  color: var(--sa-chrome-dim);
+  padding: 3rem 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
