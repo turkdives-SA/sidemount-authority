@@ -50,7 +50,7 @@ The original pair I reviewed eventually retired, not because they got worn out b
 
 ## The Price Point Is Still Absurd in the Best Way
 
-When I reviewed these originally they were $110 a pair. Pricing shifts over time and they are now $229..95 from [Deep 6](https://www.deep6gear.com/catalog/category/view/s/fins/id/9/) directly. but the value proposition has always been the same: you are getting a technically capable, instructor-grade fin at a price that should make the competition uncomfortable.
+When I reviewed these originally they were $110 a pair. Pricing shifts over time and they are now $229..95 from [Deep 6](https://www.deep6gear.com/catalog/category/view/s/fins/id/9/) directly, but the value proposition has always been the same: you are getting a technically capable, instructor-grade fin at a price that should make the competition uncomfortable.
 
 I've seen divers spend more on fins that don't frog kick as well, don't fit as well, and don't hold up as well. The Deep Six Eddy has never once made me wish I'd spent more money.
 
@@ -64,12 +64,14 @@ The only diver these fins might not suit is someone doing extremely long surface
 
 ## The Bottom Line
 
-Eight years ago I had 20 dives and a strong hunch. Now I have the dives to back it up.
+Eight years ago I had 20 dives and a strong hunch. Now I have the dives to back it up, a few thousand in fact. 
 
-The Deep Six Eddy is the best fin I have ever used. It is the fin I teach in, the fin I cave dive in, the fin I recommend to every student who asks me what to buy. I have no plans to change that.
+The Deep Six Eddy is the best fin I have ever used. It is the fin I teach in, the fin I cave dive in, the fin I recommend to every student or new instructor who asks me what to buy. I have no plans to change that.
 
 If you want to see where I started with these, the original video review is still up on [my YouTube channel](https://www.youtube.com/@SIDEMOUNT_AUTHORITY). It's a good time capsule; same fin, very different diver.
 
 Some things don't need to be upgraded. You just need more dives to appreciate them.
 
-Note: Deep 6 now offers a heavy version of these fins in a very cool dark grey with an orange pull tab for those diving in aluminum cylinders and drysuits. Also, to be totally transparent, I am now the Deep 6 Brand and Customer Experience Manager. However this does not influence my review in anyway. I actually accepted the position because of how strongly I believe in this product as well as the Signature regs that I use. If you know me, you would know I have a strong moral compass and refuse to recommend gear that I do not fully believe in.
+**Note:** 
+
+Deep 6 now offers a heavy version of these fins in a very cool dark grey with an orange pull tab for those diving in aluminum cylinders and drysuits. Also, to be totally transparent, I am now the Deep 6 Brand and Customer Experience Manager. However this does not influence my review in anyway. I actually accepted the position because of how strongly I believe in this product as well as the Signature regs that I use. If you know me, you would know I have a strong moral compass and refuse to recommend gear that I do not fully believe in.
