@@ -46,7 +46,7 @@ This is where fins get separated into two categories: fins that work for recreat
 
 ### Durability
 
-The original pair I reviewed eventually retired, not because they got word out but because I left them behind when I moved back to the U.S. during COVID.  But I picked up a new pair and have been diving the heck out of them in South Florida, Bali and now in Florida cave country. The blade material holds up, the foot pocket doesn't degrade the way softer rubbers tend to, and the spring steel strap has never given me a real problem beyond the occasional screw check I mentioned back in 2018. I did add some Loctite to them to mitigate the regular checking of the screw. 
+The original pair I reviewed eventually retired, not because they got worn out but because I left them behind when I moved back to the U.S. during COVID.  But I picked up a new pair and have been diving the heck out of them in South Florida, Bali and now in Florida cave country. The blade material holds up, the foot pocket doesn't degrade the way softer rubbers tend to, and the spring steel strap has never given me a real problem beyond the occasional screw check I mentioned back in 2018. I did add some Loctite to them to mitigate the regular checking of the screw. 
 
 ## The Price Point Is Still Absurd in the Best Way
 
