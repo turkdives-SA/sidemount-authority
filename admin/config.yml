@@ -81,6 +81,9 @@ collections:
   # ──────────────────────────────────────────────
   # HOME PAGE
   # ──────────────────────────────────────────────
+  # ──────────────────────────────────────────────
+  # HOME PAGE
+  # ──────────────────────────────────────────────
   - name: "home"
     label: "Home Page"
     files:
@@ -103,7 +106,7 @@ collections:
               - { label: "Icon Character", name: "icon", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Body", name: "body", widget: "text" }
-         - label: "Photo Band"
+          - label: "Photo Band"
             name: "photo_band"
             widget: "object"
             fields:
@@ -137,7 +140,6 @@ collections:
               - { label: "Primary Button URL", name: "button_url", widget: "string" }
               - { label: "Secondary Button Text", name: "secondary_text", widget: "string" }
               - { label: "Secondary Button URL", name: "secondary_url", widget: "string" }
-
   # ──────────────────────────────────────────────
   # SITE SETTINGS
   # ──────────────────────────────────────────────
