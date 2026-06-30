@@ -2,6 +2,6 @@
 name: Tavo Padilla
 location: Mexico
 email: info@darksidediversmx.com
-agency: TDI
+agency: RAID, TDI
 notes: Mexico Style (Aluminum Cylinders)
 ---
