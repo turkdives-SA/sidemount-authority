@@ -112,6 +112,15 @@ collections:
               - { label: "Quote", name: "quote", widget: "string" }
               - { label: "Coordinates Left", name: "coord_left", widget: "string" }
               - { label: "Coordinates Right", name: "coord_right", widget: "string" }
+              - label: "Currently"
+            name: "currently"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string", default: "Currently" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+              - { label: "Link Text", name: "link_text", widget: "string", required: false }
+              - { label: "Link URL", name: "link_url", widget: "string", required: false }
           - label: "Featured Tips Section"
             name: "featured_tips"
             widget: "object"
