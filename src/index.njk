@@ -84,6 +84,20 @@ description: Expert sidemount scuba diving training and gear reviews from a RAID
     </div>
   </div>
 </section>
+<!-- ======================================================
+  CURRENTLY
+  ====================================================== -->
+<section class="currently-band" aria-labelledby="currently-heading">
+  <div class="container">
+    <span class="eyebrow">{{ home.currently.eyebrow }}</span>
+    <h2 id="currently-heading">{{ home.currently.heading }}</h2>
+    <p>{{ home.currently.body }}</p>
+    {% if home.currently.link_url %}
+    <a href="{{ home.currently.link_url }}" class="btn btn-ghost">{{ home.currently.link_text }} →</a>
+    {% endif %}
+  </div>
+</section>
+
 
 
 <!-- ======================================================
