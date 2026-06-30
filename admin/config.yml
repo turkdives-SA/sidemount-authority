@@ -161,7 +161,7 @@ collections:
  # ──────────────────────────────────────────────
   # CREDENTIALS (About page)
   # ──────────────────────────────────────────────
-  - name: "about"
+- name: "about"
     label: "About Page"
     files:
       - name: "credentials"
@@ -175,3 +175,13 @@ collections:
               - { label: "Agency", name: "agency", widget: "string" }
               - { label: "Credential / Title", name: "credential", widget: "string" }
               - { label: "Detail", name: "detail", widget: "text" }
+      - name: "about_bio"
+        label: "Currently / Bio Section"
+        file: "src/_data/about_bio.json"
+        fields:
+          - { label: "Eyebrow", name: "eyebrow", widget: "string", default: "Currently" }
+          - { label: "Heading", name: "heading", widget: "string" }
+          - label: "Paragraphs"
+            name: "paragraphs"
+            widget: "list"
+            field: { label: "Paragraph", name: "paragraph", widget: "text" }
