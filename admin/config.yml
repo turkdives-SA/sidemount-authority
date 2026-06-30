@@ -164,13 +164,17 @@ collections:
   - name: "about"
     label: "About Page"
     files:
-      - name: "credentials"
+     - name: "credentials"
         label: "Credentials"
         file: "src/_data/credentials.json"
         fields:
           - label: "Credentials"
-            name: "credentials"
+            name: "items"
             widget: "list"
+            fields:
+              - { label: "Agency", name: "agency", widget: "string" }
+              - { label: "Credential / Title", name: "credential", widget: "string" }
+              - { label: "Detail", name: "detail", widget: "text" }
             fields:
               - { label: "Agency", name: "agency", widget: "string" }
               - { label: "Credential / Title", name: "credential", widget: "string" }
