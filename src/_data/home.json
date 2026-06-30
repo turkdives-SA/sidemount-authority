@@ -38,19 +38,19 @@
       "body": "Real-world gear reviews from thousands of hours underwater. No sponsored fluff — just what works at depth."
     }
   ],
-  "photo_band": {
+ "photo_band": {
     "image": "/images/diver-eyecontact.webp",
     "image_alt": "Sidemount diver maintaining trim",
     "quote": "Sidemount is not a configuration — it's a discipline and an art! ",
     "coord_left": "N 18°28.431",
     "coord_right": "W 087°27.182"
-    "currently": {
+  },
+  "currently": {
     "eyebrow": "Currently",
     "heading": "Stateside. Building. Diving Deeper.",
     "body": "After four years running Prana Dive in Bali, I moved back to the U.S. on June 1, 2026 to become Brand and Customer Experience Manager at Deep 6 Expedition Gear. I'm also working toward full cave certification in Florida cave country — and applying the same AXIS Method logic I teach in sidemount to gear, business, and every other system that's gotten more complicated than it needs to be.",
     "link_text": "Read the Full Story",
     "link_url": "/about/"
-  },
   },
   "featured_tips": {
     "heading": "Latest Gear Tips",
