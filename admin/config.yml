@@ -161,7 +161,10 @@ collections:
  # ──────────────────────────────────────────────
   # CREDENTIALS (About page)
   # ──────────────────────────────────────────────
-- name: "about"
+# ──────────────────────────────────────────────
+  # CREDENTIALS (About page)
+  # ──────────────────────────────────────────────
+  - name: "about"
     label: "About Page"
     files:
       - name: "credentials"
