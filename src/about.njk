@@ -23,7 +23,7 @@ permalink: /about/
       <h2 id="credentials-heading" style="margin-bottom:2rem; font-size:clamp(1.5rem,2.5vw,2rem);">Certifications &amp; Recognition</h2>
 
       <div class="credentials-grid">
-       {% for cred in credentials %}
+      {% for cred in credentials.items %}
         <div class="credential-card">
           <span class="credential-agency">{{ cred.agency }}</span>
           <h3>{{ cred.credential }}</h3>
