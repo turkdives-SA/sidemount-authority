@@ -103,7 +103,7 @@ collections:
               - { label: "Icon Character", name: "icon", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Body", name: "body", widget: "text" }
-          - label: "Photo Band"
+         - label: "Photo Band"
             name: "photo_band"
             widget: "object"
             fields:
@@ -112,7 +112,7 @@ collections:
               - { label: "Quote", name: "quote", widget: "string" }
               - { label: "Coordinates Left", name: "coord_left", widget: "string" }
               - { label: "Coordinates Right", name: "coord_right", widget: "string" }
-              - label: "Currently"
+          - label: "Currently"
             name: "currently"
             widget: "object"
             fields:
