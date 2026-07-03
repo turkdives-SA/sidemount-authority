@@ -21,11 +21,11 @@ permalink: /instructors/
 
       {% if collections.instructors.length %}
       <div class="instructors-table-wrap">
-        <table class="instructors-table">
+        <table class="instructors-table" id="instructors-table">
           <thead>
             <tr>
-              <th scope="col">Name</th>
-              <th scope="col">Location</th>
+              <th scope="col" data-sort="0">Name</th>
+              <th scope="col" data-sort="1">Location</th>
               <th scope="col">Agency</th>
               <th scope="col">Contact</th>
               <th scope="col">Notes</th>
@@ -49,6 +49,45 @@ permalink: /instructors/
             {% endfor %}
           </tbody>
         </table>
+</table>
+      </div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const table = document.getElementById("instructors-table");
+          if (!table) return;
+
+          const tbody = table.querySelector("tbody");
+          const headers = table.querySelectorAll("th[data-sort]");
+
+          headers.forEach(function (th) {
+            th.style.cursor = "pointer";
+            th.addEventListener("click", function () {
+              const colIndex = parseInt(th.getAttribute("data-sort"), 10);
+              const dir = th.getAttribute("data-sort-dir") === "asc" ? "desc" : "asc";
+
+              headers.forEach(function (h) {
+                h.removeAttribute("data-sort-dir");
+                h.classList.remove("sort-asc", "sort-desc");
+              });
+              th.setAttribute("data-sort-dir", dir);
+              th.classList.add(dir === "asc" ? "sort-asc" : "sort-desc");
+
+              const rows = Array.from(tbody.querySelectorAll("tr"));
+              rows.sort(function (a, b) {
+                const aVal = a.children[colIndex].textContent.trim().toLowerCase();
+                const bVal = b.children[colIndex].textContent.trim().toLowerCase();
+                if (aVal < bVal) return dir === "asc" ? -1 : 1;
+                if (aVal > bVal) return dir === "asc" ? 1 : -1;
+                return 0;
+              });
+
+              rows.forEach(function (row) {
+                tbody.appendChild(row);
+              });
+            });
+          });
+        });
+      </script>
       </div>
       {% else %}
       <div class="no-posts">
