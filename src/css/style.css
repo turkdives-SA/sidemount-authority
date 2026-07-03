@@ -1089,6 +1089,25 @@ p { max-width: 70ch; }
   font-size: 0.95rem;
 }
 
+.instructors-table {
+  width: 100%;
+  /* ...your existing rules... */
+}
+
+.instructors-table th[data-sort] {
+  cursor: pointer;
+  user-select: none;
+}
+.instructors-table th[data-sort]:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+.instructors-table th.sort-asc::after {
+  content: " ▲";
+}
+.instructors-table th.sort-desc::after {
+  content: " ▼";
+}
+
 .instructors-table thead {
   background: var(--sa-panel);
   border-bottom: 1px solid var(--sa-steel);
