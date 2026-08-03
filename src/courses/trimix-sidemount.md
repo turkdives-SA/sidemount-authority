@@ -35,7 +35,7 @@ description: >-
 
   Be certified as RAID Sidemount diver.
 duration: 5–7 days
-price: $450 per day
+price: $350 per day
 image: /images/hero-reef-pair.webp
 image_alt: Sidemount divers descending a reef wall
 order: 4
