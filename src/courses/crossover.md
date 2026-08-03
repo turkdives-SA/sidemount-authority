@@ -18,7 +18,7 @@ description: >+
   Bailout must have sufficient volume to complete a safe ascent including the required safety stop.
 
 duration: 3-4 days
-price: $400 per day
+price: $300 per day
 image: /images/diver-eyecontact.webp
 image_alt: Diver demonstrating sidemount configuration
 order: 6
