@@ -11,7 +11,7 @@ description: >-
 
   Student Prerequisites: Certified Sidemount Decompression Diver and Rescue Diver. Current First Aid, CPR and Oxygen Administration training.  Minimum of 100 dives (RAID standard says 50) with at least 10 between 30-40 meters/ 100-130 feet
 duration: 6 days
-price: $450 per day
+price: $350 per day
 image: /images/deco-hang.webp
 image_alt: Technical sidemount diver at depth
 order: 3
