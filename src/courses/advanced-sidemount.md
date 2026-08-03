@@ -15,7 +15,7 @@ description: >-
 
   This can be a one day workshop or a week-long intensive, it is up to you and the goals you want to achieve. 
 duration: 1-6 days
-price: $400 per day
+price: $350 per day
 image: /images/diver-eyecontact.webp
 image_alt: Sidemount diver in dark open water
 order: 1
