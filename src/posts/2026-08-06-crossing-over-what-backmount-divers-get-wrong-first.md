@@ -31,4 +31,4 @@ Sidemount changes the entire logic of gas redundancy. You have two fully indepen
 None of this is about twinset divers being bad divers. It's the opposite — they're good enough that their instincts are strong, which makes those instincts harder to override when they're the wrong instincts for this configuration. Sidemount isn't backmount with the cylinders moved. It's a different logic system for buoyancy, gas management, and redundancy, and it demands you actually understand *why* it works the way it does — not just that it works.
 That's the whole premise behind how I run sidemount training. We don't polish old habits. We rebuild the ones that don't belong, and keep the ones that do and it is all done in a properly aligned system. 
 
-https://www.facebook.com/sharer/sharer.php?u=YOUR_PAGE_URL
+https://www.facebook.com/sharer/sharer.php?u=https://sidemountauthority.com/posts/2026-08-06-crossing-over-what-backmount-divers-get-wrong-first/
