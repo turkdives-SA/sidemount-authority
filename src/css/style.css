@@ -1560,3 +1560,35 @@ p { max-width: 70ch; }
   font-family: var(--font-mono);
   font-size: 0.85rem;
 }
+/* ─────────────────────────────────────────────
+   Post Share Buttons — Brand Orange Styling
+   Add this to your main stylesheet
+───────────────────────────────────────────── */
+
+.post-share {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.share-label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.post-share .share-btn,
+.post-share #copy-link-btn {
+  color: #FC5A1F;
+  border: 1px solid #FC5A1F;
+  background: transparent;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.post-share .share-btn:hover,
+.post-share #copy-link-btn:hover {
+  background: #FC5A1F;
+  color: #0A0A0A;
+}
