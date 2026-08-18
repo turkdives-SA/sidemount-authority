@@ -51,11 +51,11 @@ There's nothing inherently wrong with an instructor teaching a configuration the
 
 I'd want to know that my instructor has spent enough time in the configuration to have experienced the problems I'm likely to experience.
 
-Equipment changes.
-
-Gas loads change.
+Cylinder buoyancy changes.
 
 Conditions change.
+
+Loss of gas events. 
 
 The dive doesn't always go according to the plan you made on the surface.
 
@@ -152,7 +152,7 @@ What matters is what the instructor does about it.
 
 I'd rather have an instructor tell me, "You're not ready yet, so we're going to spend another session working on this," than someone who says, "You've completed all the skills, so here's your card."
 
-Certification and readiness are not always the same thing.
+Certification and competence are not always the same thing.
 
 ## If You're Coming From Twinset, Ask About Crossover Training
 
