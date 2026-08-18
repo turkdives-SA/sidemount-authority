@@ -203,11 +203,11 @@ Ask better questions.
 For example:
 
 > What was the hardest part of the course?
-
+>
 > Did the instructor explain why things were being changed, or mostly tell you what to change?
-
+>
 > Did you feel prepared to go diving on your own afterward?
-
+>
 > What happened when you struggled with something?
 
 Those answers will tell you considerably more than a five-star review.
@@ -421,7 +421,7 @@ And that's the standard I think divers should expect.
 
 If, for whatever reason, you don't want to train with me, that's completely fine.
 
-I've put together a curated list of sidemount instructors I genuinely believe are worth considering.
+I've put together a [curated list](https://sidemountauthority.com/instructors/) of sidemount instructors I genuinely believe are worth considering.
 
 It's intentionally a short list.
 
