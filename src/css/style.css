@@ -5,6 +5,7 @@
 /* --- Custom Properties ------------------------------------ */
 :root {
   --sa-void:         #0A0A0B;
+  --sa-void-gradient: linear-gradient(180deg, #0A0A0B 0%, #1C1E22 50%, #0A0A0B 100%);
   --sa-void-soft:    #101114;
   --sa-panel:        #14161A;
   --sa-steel:        #2A2D33;
@@ -43,7 +44,8 @@ html {
 }
 
 body {
-  background-color: var(--sa-void);
+  background: var(--sa-void-gradient);
+  background-attachment: fixed;
   color: var(--sa-chrome);
   font-family: var(--font-body);
   font-size: 1rem;
@@ -266,7 +268,7 @@ p { max-width: 70ch; }
   display: flex;
   flex-direction: column;
   padding-top: var(--header-h);
-  background: #0A0A0B;
+  background: var(--sa-void-gradient);
 }
 
 .hero-image-wrap {
@@ -322,7 +324,7 @@ p { max-width: 70ch; }
   align-items: center;
   gap: 1.5rem;
   text-align: center;
-  background: var(--sa-void);
+  background: var(--sa-void-gradient);
 }
 
 .hero-subtitle {
