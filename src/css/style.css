@@ -5,7 +5,7 @@
 /* --- Custom Properties ------------------------------------ */
 :root {
   --sa-void:         #0A0A0B;
-  --sa-void-gradient: linear-gradient(180deg, #0A0A0B 0%, #1C1E22 50%, #0A0A0B 100%);
+  --sa-void-gradient: linear-gradient(180deg, #0A0A0B 0%, #242629 50%, #0A0A0B 100%);
   --sa-void-soft:    #101114;
   --sa-panel:        #14161A;
   --sa-steel:        #2A2D33;
