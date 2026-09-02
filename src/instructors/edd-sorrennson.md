@@ -1,5 +1,5 @@
 ---
-name: Edd Sorrennson
+name: Edd Sorenson
 location: Marianna, Florida, USA
 email: caveadventurers@hotmail.com
 agency: TDI, IANTD, PSAI, NSS-CDS
