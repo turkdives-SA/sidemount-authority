@@ -5,6 +5,15 @@ description: Recommended sidemount scuba diving instructors around the world. Ha
 permalink: /instructors/
 ---
 
+<style>
+  /* Override default header hover — brand orange instead of the generic
+     light-grey wash, so it's clear which columns are clickable/sortable. */
+  .instructors-table th[data-sort]:hover {
+    color: var(--sa-signal);
+    background: rgba(255, 90, 31, 0.08);
+  }
+</style>
+
 <div class="instructors-page">
 
   <header class="page-hero">
@@ -21,10 +30,10 @@ permalink: /instructors/
 
 {% if collections.instructors.length %}
       <div class="instructors-table-wrap">
-        <table class="instructors-table" id="instructors-table">
+        <table class="instructors-table" id="instructors-table" style="opacity:0; transition: opacity 0.15s ease;">
           <thead>
             <tr>
-              <th scope="col" data-sort="0">Name</th>
+              <th scope="col" data-sort="0" data-sort-type="lastname">Name</th>
               <th scope="col" data-sort="1">Location</th>
               <th scope="col">Agency</th>
               <th scope="col">Contact</th>
@@ -58,10 +67,44 @@ permalink: /instructors/
           const tbody = table.querySelector("tbody");
           const headers = table.querySelectorAll("th[data-sort]");
 
+          // ── Extract a sortable key from a cell's text.
+          // For the Name column, use the LAST word (last name) instead of
+          // the full string, so sorting groups people by surname rather
+          // than by whichever name happens to come first alphabetically.
+          function getSortKey(cell, sortType) {
+            const text = cell.textContent.trim();
+            if (sortType === "lastname") {
+              const parts = text.split(/\s+/);
+              return parts[parts.length - 1].toLowerCase();
+            }
+            return text.toLowerCase();
+          }
+
+          // ── Shuffle helper (Fisher–Yates) so no instructor is
+          // advantaged/disadvantaged by always appearing first or last.
+          // Runs once per page load — a fresh random order every visit.
+          function shuffle(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+              const j = Math.floor(Math.random() * (i + 1));
+              [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+          }
+
+          // Randomize initial row order before the table becomes visible,
+          // so every visitor sees a different starting arrangement and
+          // must actively choose a column to sort by.
+          const initialRows = Array.from(tbody.querySelectorAll("tr"));
+          shuffle(initialRows).forEach(function (row) {
+            tbody.appendChild(row);
+          });
+          table.style.opacity = "1";
+
           headers.forEach(function (th) {
             th.style.cursor = "pointer";
             th.addEventListener("click", function () {
               const colIndex = parseInt(th.getAttribute("data-sort"), 10);
+              const sortType = th.getAttribute("data-sort-type") || "text";
               const dir = th.getAttribute("data-sort-dir") === "asc" ? "desc" : "asc";
 
               headers.forEach(function (h) {
@@ -73,8 +116,8 @@ permalink: /instructors/
 
               const rows = Array.from(tbody.querySelectorAll("tr"));
               rows.sort(function (a, b) {
-                const aVal = a.children[colIndex].textContent.trim().toLowerCase();
-                const bVal = b.children[colIndex].textContent.trim().toLowerCase();
+                const aVal = getSortKey(a.children[colIndex], sortType);
+                const bVal = getSortKey(b.children[colIndex], sortType);
                 if (aVal < bVal) return dir === "asc" ? -1 : 1;
                 if (aVal > bVal) return dir === "asc" ? 1 : -1;
                 return 0;
