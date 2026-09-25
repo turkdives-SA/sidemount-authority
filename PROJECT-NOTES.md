@@ -33,6 +33,11 @@ not remember previous chats — this file is the memory.
 - **A records:** @ and www both point to 75.2.60.5 (Netlify). TTL min = 900s / "1 Hour".
 - **Email:** Runs through Network Solutions (webmail at networksolutionsemail.com),
   via CNAMEs to netsolmail.net. Not affected by cancelling Bluehost.
+     - **Shop:** Fourthwall at https://shop.sidemountauthority.com (subdomain A record
+     "shop" → 34.117.223.165, plus support.shop email records for Fourthwall).
+     Linked from header nav (header.njk), footer (footer.njk), and a shop plug in the
+     training page CTA (.merch-plug in style.css). No merch section on the homepage (by choice).
+     Fourthwall header menu links back to Training, Articles, and Main Site.
 
 ## SEO / ANALYTICS
 
